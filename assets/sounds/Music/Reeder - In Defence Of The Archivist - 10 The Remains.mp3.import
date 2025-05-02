@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ck7ypr30uqvdk"
+path="res://.godot/imported/Reeder - In Defence Of The Archivist - 10 The Remains.mp3-d677d035e417ab9ad8cb542fa40aa734.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 10 The Remains.mp3"
+dest_files=["res://.godot/imported/Reeder - In Defence Of The Archivist - 10 The Remains.mp3-d677d035e417ab9ad8cb542fa40aa734.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

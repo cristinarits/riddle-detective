@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyi1pjyv613fu"
+path="res://.godot/imported/Reeder - In Defence Of The Archivist - 03 Finding; Being Found.mp3-7fe284859a5a4122a22ad3829e019b71.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 03 Finding; Being Found.mp3"
+dest_files=["res://.godot/imported/Reeder - In Defence Of The Archivist - 03 Finding; Being Found.mp3-7fe284859a5a4122a22ad3829e019b71.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

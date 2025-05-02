@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btrq18oo85gpr"
+path="res://.godot/imported/Reeder - In Defence Of The Archivist - 06 Walk Through Dust.mp3-302a5cee8ce6f54a3e8268aae49dce06.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 06 Walk Through Dust.mp3"
+dest_files=["res://.godot/imported/Reeder - In Defence Of The Archivist - 06 Walk Through Dust.mp3-302a5cee8ce6f54a3e8268aae49dce06.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

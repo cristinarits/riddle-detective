@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0otmcvy364sy"
+path="res://.godot/imported/Reeder - In Defence Of The Archivist - 11 Hedwig.mp3-04cf3dc26ac7f0d5eb08e32c1b720afe.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 11 Hedwig.mp3"
+dest_files=["res://.godot/imported/Reeder - In Defence Of The Archivist - 11 Hedwig.mp3-04cf3dc26ac7f0d5eb08e32c1b720afe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

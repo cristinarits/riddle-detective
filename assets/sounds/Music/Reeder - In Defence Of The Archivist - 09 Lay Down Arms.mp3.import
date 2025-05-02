@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ot8w1vbtylh6"
+path="res://.godot/imported/Reeder - In Defence Of The Archivist - 09 Lay Down Arms.mp3-5664e924e1637be6204147e7db452c18.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 09 Lay Down Arms.mp3"
+dest_files=["res://.godot/imported/Reeder - In Defence Of The Archivist - 09 Lay Down Arms.mp3-5664e924e1637be6204147e7db452c18.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

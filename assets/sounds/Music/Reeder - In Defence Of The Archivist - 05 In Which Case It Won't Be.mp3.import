@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gv2ucyn7po2e"
+path="res://.godot/imported/Reeder - In Defence Of The Archivist - 05 In Which Case It Won't Be.mp3-1c527020923d887765c227b26b4af66e.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 05 In Which Case It Won't Be.mp3"
+dest_files=["res://.godot/imported/Reeder - In Defence Of The Archivist - 05 In Which Case It Won't Be.mp3-1c527020923d887765c227b26b4af66e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
