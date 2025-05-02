@@ -1,8 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://djviokc8ebdl4"]
+[gd_scene load_steps=8 format=3 uid="uid://btkhkjvucyuqc"]
 
 [ext_resource type="Texture2D" uid="uid://cbpseflogtcsn" path="res://assets/character/protag_front.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://b0as205bsgsrp" path="res://assets/character/protag_back.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://turaubtlicpx" path="res://assets/character/protag_left.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bwuyrfclemlrj" path="res://assets/character/protag_right.png" id="4_tuyoq"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+[sub_resource type="GDScript" id="GDScript_g2els"]
+script/source = "extends CharacterBody2D
+
+@export var movement_speed: float = 500
+var character_direction: Vector2
+
+func _physics_process(delta):
+	character_direction.x = Input.get_axis(\"ui_left\", \"ui_right\")
+	character_direction.y = Input.get_axis(\"ui_up\", \"ui_down\")
+
+	if character_direction != Vector2.ZERO:
+		character_direction = character_direction.normalized()
+		velocity = character_direction * movement_speed
+		update_sprite_animation(character_direction)
+	else:
+		velocity = Vector2.ZERO
+		%sprite.stop()
+
+	move_and_slide()
+
+func update_sprite_animation(dir: Vector2):
+	if abs(dir.x) > abs(dir.y):
+		%sprite.animation = \"walk_right\" if dir.x > 0 else \"walk_left\"
+	else:
+		%sprite.animation = \"walk_back\" if dir.y < 0 else \"walk_front\"
+
+	if not %sprite.is_playing():
+		%sprite.play()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -10,20 +43,53 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 3.0
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dqkch")
+}],
+"loop": true,
+"name": &"walk_back",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"walk_front",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qlg0r")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 15.0
+radius = 14.0
 
 [node name="player" type="CharacterBody2D"]
+script = SubResource("GDScript_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -37)
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.05, 0.05)
-sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"idle"
+sprite_frames = SubResource("SpriteFrames_fjrip")
+animation = &"walk_back"
+autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -25)
+[node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_qhqgy")
