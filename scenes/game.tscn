@@ -1151,7 +1151,8 @@ sources/0 = SubResource("TileSetAtlasSource_yqjtg")
 [node name="Game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(1, 2)
+z_index = 1
+position = Vector2(553, 277)
 motion_mode = 1
 movement_speed = 150.0
 
