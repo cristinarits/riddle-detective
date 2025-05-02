@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://turaubtlicpx"
-path="res://.godot/imported/protag_left.png-6e913882f407eaa095fe9bc484e02a1c.ctex"
+path="res://.godot/imported/protag_left.png-e2df01bc81b809912ec8e1b595d5ccd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/character/protag_left.png"
-dest_files=["res://.godot/imported/protag_left.png-6e913882f407eaa095fe9bc484e02a1c.ctex"]
+source_file="res://assets/character/protag_left.png"
+dest_files=["res://.godot/imported/protag_left.png-e2df01bc81b809912ec8e1b595d5ccd5.ctex"]
 
 [params]
 

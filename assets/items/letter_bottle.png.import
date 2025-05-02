@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0q8xacamsqgg"
-path="res://.godot/imported/letter_bottle.png-93268e0c8316e7cf1661a344c5ab4ccc.ctex"
+path="res://.godot/imported/letter_bottle.png-3fb587c84e71d9021149559e7737db32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/items/letter_bottle.png"
-dest_files=["res://.godot/imported/letter_bottle.png-93268e0c8316e7cf1661a344c5ab4ccc.ctex"]
+source_file="res://assets/items/letter_bottle.png"
+dest_files=["res://.godot/imported/letter_bottle.png-3fb587c84e71d9021149559e7737db32.ctex"]
 
 [params]
 

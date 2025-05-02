@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6tawkv6m3w8k"
-path="res://.godot/imported/shore.png-5845d893c35a33c7da650ab005d3382a.ctex"
+path="res://.godot/imported/shore.png-edbc1d5d71dadb0eedbb975c40cd1e4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/background/shore.png"
-dest_files=["res://.godot/imported/shore.png-5845d893c35a33c7da650ab005d3382a.ctex"]
+source_file="res://assets/background/shore.png"
+dest_files=["res://.godot/imported/shore.png-edbc1d5d71dadb0eedbb975c40cd1e4c.ctex"]
 
 [params]
 

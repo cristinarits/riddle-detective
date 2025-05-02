@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgc4of0y21qs"
-path="res://.godot/imported/vnm_inkteller_idle.png-0f2537dcd4f843bb0da8a10f4695a924.ctex"
+path="res://.godot/imported/vnm_inkteller_idle.png-bb181c00c0b6a6a1a4f885e28909a04b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/character/vnm_inkteller_idle.png"
-dest_files=["res://.godot/imported/vnm_inkteller_idle.png-0f2537dcd4f843bb0da8a10f4695a924.ctex"]
+source_file="res://assets/character/vnm_inkteller_idle.png"
+dest_files=["res://.godot/imported/vnm_inkteller_idle.png-bb181c00c0b6a6a1a4f885e28909a04b.ctex"]
 
 [params]
 
