@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Riddle Detective"
-run/main_scene="uid://yb6rlsmpgr2q"
+run/main_scene="uid://cxpbufcwdm3kb"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
