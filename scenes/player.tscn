@@ -12,26 +12,39 @@ script/source = "extends CharacterBody2D
 var character_direction: Vector2
 
 func _physics_process(delta):
-	character_direction.x = Input.get_axis(\"ui_left\", \"ui_right\")
-	character_direction.y = Input.get_axis(\"ui_up\", \"ui_down\")
+	character_direction = Vector2.ZERO
+
+	if Input.is_action_pressed(\"ui_right\"):
+		character_direction.x += 1
+	if Input.is_action_pressed(\"ui_left\"):
+		character_direction.x -= 1
+	if Input.is_action_pressed(\"ui_down\"):
+		character_direction.y += 1
+	if Input.is_action_pressed(\"ui_up\"):
+		character_direction.y -= 1
 
 	if character_direction != Vector2.ZERO:
 		character_direction = character_direction.normalized()
-		velocity = character_direction * movement_speed
-		update_sprite_animation(character_direction)
+		self.velocity = character_direction * movement_speed
+		update_walk_animation(character_direction)
 	else:
-		velocity = Vector2.ZERO
-		%sprite.stop()
+		self.velocity = Vector2.ZERO
+		update_idle_animation()
 
 	move_and_slide()
 
-func update_sprite_animation(dir: Vector2):
+func update_walk_animation(dir: Vector2):
 	if abs(dir.x) > abs(dir.y):
 		%sprite.animation = \"walk_right\" if dir.x > 0 else \"walk_left\"
 	else:
 		%sprite.animation = \"walk_back\" if dir.y < 0 else \"walk_front\"
 
 	if not %sprite.is_playing():
+		%sprite.play()
+
+func update_idle_animation():
+	if %sprite.animation != \"idle\":
+		%sprite.animation = \"idle\"
 		%sprite.play()
 "
 
@@ -88,7 +101,7 @@ script = SubResource("GDScript_g2els")
 unique_name_in_owner = true
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"walk_back"
+animation = &"walk_right"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
