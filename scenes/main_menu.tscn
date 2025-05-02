@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cxpbufcwdm3kb"]
+[gd_scene load_steps=13 format=3 uid="uid://cxpbufcwdm3kb"]
 
 [ext_resource type="Script" uid="uid://csiao5vrwtxfv" path="res://scenes/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b6tawkv6m3w8k" path="res://assets/background/shore.png" id="1_ekxnf"]
@@ -41,6 +41,16 @@ shadow_color = Color(0, 0, 0, 0.133333)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.4)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wu84c"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8ln24"]
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_rtw2f"]
+thickness = 6
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -62,6 +72,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_wu84c")
 
 [node name="MainButtons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -141,6 +152,11 @@ text = "Mystical riddles"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wu84c")
+autoplay = true
+bus = &"Music"
+
 [node name="Options" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -166,7 +182,7 @@ text = "options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="back" type="Button" parent="Options/Label"]
+[node name="back" type="Button" parent="Options"]
 offset_left = 150.0
 offset_top = 315.5
 offset_right = 454.0
@@ -184,11 +200,36 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 text = "back
 "
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_wu84c")
-autoplay = true
+[node name="AudioControl" type="HSlider" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -116.5
+offset_right = 177.0
+offset_bottom = -66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_wu84c")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_8ln24")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_rtw2f")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label" type="Label" parent="Options/AudioControl"]
+layout_mode = 0
+offset_left = -66.0
+offset_top = 9.5
+offset_right = -20.0
+offset_bottom = 32.5
+text = "music"
 
 [connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Button2" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainButtons/Button3" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Options/Label/back" to="." method="_on_back_options_pressed"]
+[connection signal="pressed" from="Options/back" to="." method="_on_back_options_pressed"]
+[connection signal="value_changed" from="Options/AudioControl" to="Options/AudioControl" method="_on_value_changed"]

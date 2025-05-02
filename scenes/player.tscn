@@ -124,7 +124,7 @@ scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_fjrip")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.637316
+frame_progress = 0.724385
 speed_scale = 0.5
 
 [node name="collision" type="CollisionShape2D" parent="."]
