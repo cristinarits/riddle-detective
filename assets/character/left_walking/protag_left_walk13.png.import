@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu8t6qsawlad"
-path="res://.godot/imported/protag_left_walk1.png-c6724fd6b58ec44d1fd6a77d03883f84.ctex"
+uid="uid://deyryjlqw8y7w"
+path="res://.godot/imported/protag_left_walk13.png-940c4cadb5e235e70ae16cbc6d815ac5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/walking/protag_left_walk1.png"
-dest_files=["res://.godot/imported/protag_left_walk1.png-c6724fd6b58ec44d1fd6a77d03883f84.ctex"]
+source_file="res://assets/character/left_walking/protag_left_walk13.png"
+dest_files=["res://.godot/imported/protag_left_walk13.png-940c4cadb5e235e70ae16cbc6d815ac5.ctex"]
 
 [params]
 
