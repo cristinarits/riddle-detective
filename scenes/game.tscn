@@ -374,7 +374,6 @@ tile_map_data = PackedByteArray("AAASAAkAAAAAAC4AAAAiAAkAAAAAAC4AAAAYAAkAAAAEAC4
 tile_set = SubResource("TileSet_lnu2h")
 
 [node name="empty layer for dublication" type="TileMapLayer" parent="TileMap2"]
-visible = false
 use_parent_material = true
 position = Vector2(0, -3)
 tile_set = SubResource("TileSet_lnu2h")

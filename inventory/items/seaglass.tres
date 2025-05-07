@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://chgrwja7lisfe"]
+
+[ext_resource type="Script" uid="uid://h2nfechsqp48" path="res://inventory/inventory_item.gd" id="1_kshef"]
+[ext_resource type="Texture2D" uid="uid://b13m6iih1b72y" path="res://assets/items/sea_glass.png" id="2_5odq0"]
+
+[resource]
+script = ExtResource("1_kshef")
+name = "sea glass"
+texture = ExtResource("2_5odq0")
+metadata/_custom_type_script = "uid://h2nfechsqp48"
