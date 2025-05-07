@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=7 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sealed_letter.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("2_yqjtg")
@@ -380,3 +381,18 @@ tile_set = SubResource("TileSet_lnu2h")
 
 [node name="SealedLetter" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(-157, 68)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("4_lbhrr")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.5
+offset_top = -48.0
+offset_right = 148.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0

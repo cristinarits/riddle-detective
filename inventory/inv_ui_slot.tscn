@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2k0vcg1do1y2"]
+
+[ext_resource type="Texture2D" uid="uid://dmn461gc8tlx1" path="res://assets/items/slot.png" id="1_dfngl"]
+
+[node name="inv_UI_slot" type="Panel"]
+custom_minimum_size = Vector2(56, 56)
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dfngl")
+centered = false
