@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://crsqcujg1yebf"]
+
+[ext_resource type="FontFile" uid="uid://b5c1pgjgtjbl4" path="res://UI/font/dogicabold.ttf" id="1_1bis6"]
+[ext_resource type="Script" uid="uid://dcbx2lmq4ukj5" path="res://interation_components/interacting_component.gd" id="1_gkgvl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkgvl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dimv3"]
+font = ExtResource("1_1bis6")
+font_size = 11
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InteractingComponent" type="Node2D"]
+script = ExtResource("1_gkgvl")
+
+[node name="InteractRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractRange"]
+shape = SubResource("CircleShape2D_gkgvl")
+
+[node name="InteractLabel" type="Label" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -47.0
+offset_right = 47.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "E to interact"
+label_settings = SubResource("LabelSettings_dimv3")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="InteractRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="InteractRange" to="." method="_on_interact_range_area_exited"]

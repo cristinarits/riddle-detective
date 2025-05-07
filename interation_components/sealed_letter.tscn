@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://fp378vcch5d0"]
+
+[ext_resource type="Script" uid="uid://bckkbn5uaeh12" path="res://interation_components/sealed_letter.gd" id="1_otjrv"]
+[ext_resource type="Texture2D" uid="uid://cttsd8hp02h60" path="res://assets/items/sealed_letter.png" id="2_lyekf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oc212"]
+
+[node name="SealedLetter" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_otjrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.195, 1.195)
+shape = SubResource("CircleShape2D_oc212")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_lyekf")
