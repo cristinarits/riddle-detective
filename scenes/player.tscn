@@ -93,6 +93,12 @@ func update_idle_animation(dir: Vector2):
 
 	if not %sprite.is_playing():
 		%sprite.play()
+
+func player():
+	pass
+
+func collect(item):
+	inv.insert(item)
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
