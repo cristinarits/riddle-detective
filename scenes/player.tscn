@@ -43,6 +43,8 @@
 [sub_resource type="GDScript" id="GDScript_g2els"]
 script/source = "extends CharacterBody2D
 
+class_name  Player
+
 @export var movement_speed: float = 500
 var character_direction: Vector2
 var last_direction: Vector2 = Vector2.DOWN

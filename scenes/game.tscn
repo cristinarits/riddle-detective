@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=17 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
@@ -7,9 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://buplj38oofupe" path="res://assets/tileset/waves.png" id="5_gee14"]
 [ext_resource type="Texture2D" uid="uid://bhshnwragmdnq" path="res://assets/tileset/rock1.png" id="6_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
-[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="8_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="11_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("2_yqjtg")
@@ -417,9 +416,6 @@ tile_set = SubResource("TileSet_lnu2h")
 use_parent_material = true
 tile_set = SubResource("TileSet_lnu2h")
 
-[node name="SealedLetter" parent="." instance=ExtResource("8_lnu2h")]
-position = Vector2(-157, 68)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("9_lbhrr")]
@@ -435,5 +431,15 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="letter_bottle" parent="." instance=ExtResource("11_iywne")]
-position = Vector2(-139, 135)
+[node name="doors" type="Node" parent="."]
+
+[node name="door_W" parent="doors" instance=ExtResource("9_0tnpc")]
+position = Vector2(580, -7)
+destination_level_tag = "shore"
+destination_door_tag = "E"
+spawn_direction = "down"
+
+[node name="Spawn" parent="doors/door_W" index="1"]
+position = Vector2(-45, 0)
+
+[editable path="doors/door_W"]

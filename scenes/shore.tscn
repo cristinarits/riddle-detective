@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://v64h4oyrc30e"]
+[gd_scene load_steps=18 format=4 uid="uid://v64h4oyrc30e"]
 
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="1_tuc82"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_a81o0"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://buplj38oofupe" path="res://assets/tileset/waves.png" id="4_yhopk"]
 [ext_resource type="Texture2D" uid="uid://bhshnwragmdnq" path="res://assets/tileset/rock1.png" id="5_12c14"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="6_5evtj"]
+[ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="7_oah6v"]
+[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="8_a81o0"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="9_w8k8i"]
+[ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="10_yhopk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2efu"]
 texture = ExtResource("1_tuc82")
@@ -399,3 +403,25 @@ use_parent_material = true
 position = Vector2(0, 3)
 tile_map_data = PackedByteArray("AAARAB4AAAAKAAEAAAAOAB8AAAAOAAIAAAAUAB4AAAAOAAAAAAAuABwAAAAGAAAAAAAlACIAAAAGAAAAAAAXACEAAAAGAAAAAAAOABUAAAAGAAAAAAAtABYAAAAGAAAAAAAZABkABQAAAAAAAAAeABkAAAAGAC4AAGAeABoAAAAGAC4AAGAeABsAAAAGAC4AAGAeABwAAAAIAC4AAHAeAB0AAAAGAC4AAGAeAB4AAAAGAC4AAGAeAB8AAAAGAC4AAGAeACAAAAAGAC4AAGAeACEAAAAGAC4AAGAeACIAAAAGAC4AAGAeACMAAAAGAC4AAGAeACQAAAAGAC4AAGAeACUAAAAGAC4AAGAeACYAAAAGAC4AAGAeACcAAAAGAC4AAGAeACgAAAAGAC4AAGAeACkAAAAGAC4AAGAfABgAAAAGAC4AAGAfABkAAAAGAC4AAGAfABoAAAAGAC4AAGAfABsAAAAGAC4AAGAfABwAAAAGAC4AAGAfAB0AAAAGAC4AAGAfAB4AAAAGAC4AAGAfAB8AAAAGAC4AAGAfACAAAAAGAC4AAGAfACEAAAAIAC4AAGAfACIAAAAGAC4AAGAfACMAAAAGAC4AAGAfACQAAAAGAC4AAGAfACUAAAAGAC4AAGAfACYAAAAGAC4AAGAfACcAAAAIAC4AAGAfACgAAAAGAC4AAGAfACkAAAAGAC4AAGAgABgAAAAGAC4AAGAgABkAAAAGAC4AAGAgABoAAAAGAC4AAGAgABsAAAAGAC4AAGAgABwAAAAGAC4AAGAgAB0AAAAGAC4AAGAgAB4AAAAGAC4AAGAgAB8AAAAIAC4AAHAgACAAAAAGAC4AAGAgACEAAAAGAC4AAGAgACIAAAAGAC4AAGAgACMAAAAGAC4AAGAgACQAAAAGAC4AAGAgACUAAAAGAC4AAGAgACYAAAAGAC4AAGAgACcAAAAGAC4AAGAgACgAAAAGAC4AAGAgACkAAAAGAC4AAGAhABgAAAAGAC4AAGAhABkAAAAGAC4AAGAhABoAAAAGAC4AAGAhABsAAAAGAC4AAGAhABwAAAAGAC4AAGAhAB0AAAAGAC4AAGAhAB4AAAAGAC4AAGAhAB8AAAAGAC4AAGAhACAAAAAGAC4AAGAhACEAAAAGAC4AAGAhACIAAAAGAC4AAGAhACMAAAAGAC4AAGAhACQAAAAGAC4AAGAhACUAAAAGAC4AAGAhACYAAAAGAC4AAGAhACcAAAAGAC4AAGAhACgAAAAGAC4AAGAhACkAAAAGAC4AAGAiABgAAAAGAC4AAGAiABkAAAAGAC4AAGAiABoAAAAGAC4AAGAiABsAAAAGAC4AAGAiABwAAAAGAC4AAGAiAB0AAAAGAC4AAGAiAB4AAAAGAC4AAGAiAB8AAAAGAC4AAGAiACAAAAAGAC4AAGAiACEAAAAGAC4AAGAiACIAAAAGAC4AAGAiACMAAAAIAC4AAGAiACQAAAAGAC4AAGAiACUAAAAGAC4AAGAiACYAAAAGAC4AAGAiACcAAAAGAC4AAGAiACgAAAAGAC4AAGAiACkAAAAGAC4AAGAjABkAAAAGAC4AAGAjABoAAAAGAC4AAGAjABsAAAAGAC4AAGAjABwAAAAGAC4AAGAjAB0AAAAGAC4AAGAjAB4AAAAGAC4AAGAjAB8AAAAGAC4AAGAjACAAAAAGAC4AAGAjACEAAAAGAC4AAGAjACIAAAAGAC4AAGAjACMAAAAGAC4AAGAjACQAAAAGAC4AAGAjACUAAAAGAC4AAGAjACYAAAAGAC4AAGAjACcAAAAGAC4AAGAjACgAAAAGAC4AAGAjACkAAAAIAC4AAHBHABgABQAAAAAAAABDABgABQAAAAAAAAA0AB0ABQAAAAAAAAACABYABgAAAAAAAAAJABgABQAAAAAAAAA=")
 tile_set = SubResource("TileSet_ruf66")
+
+[node name="letter_bottle" parent="." instance=ExtResource("7_oah6v")]
+position = Vector2(907, 281)
+
+[node name="SeaGlass" parent="." instance=ExtResource("8_a81o0")]
+position = Vector2(75, 333)
+
+[node name="Door" type="Node" parent="."]
+
+[node name="Door_shore" parent="Door" instance=ExtResource("9_w8k8i")]
+position = Vector2(530, 617)
+destination_level_tag = "game"
+destination_door_tag = "W"
+spawn_direction = "left"
+
+[node name="Spawn" parent="Door/Door_shore" index="1"]
+position = Vector2(0, -39)
+
+[node name="player" parent="." instance=ExtResource("10_yhopk")]
+position = Vector2(529, 543)
+
+[editable path="Door/Door_shore"]
