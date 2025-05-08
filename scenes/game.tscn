@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sealed_letter.tscn" id="8_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="10_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="11_iywne"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("2_yqjtg")
@@ -416,7 +419,6 @@ tile_set = SubResource("TileSet_lnu2h")
 
 [node name="town_square" type="TileMapLayer" parent="TileMap"]
 visible = false
->>>>>>> Stashed changes
 use_parent_material = true
 position = Vector2(0, -3)
 tile_set = SubResource("TileSet_lnu2h")
@@ -467,3 +469,6 @@ offset_right = 148.5
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="letter_bottle" parent="." instance=ExtResource("11_iywne")]
+position = Vector2(-139, 135)
