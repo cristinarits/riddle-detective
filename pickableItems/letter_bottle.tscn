@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddcjoouyv41f8"]
+
+[ext_resource type="Script" uid="uid://bgmw58xoxp7fh" path="res://pickableItems/letter_bottle.gd" id="1_40f42"]
+[ext_resource type="Resource" uid="uid://btyeec15m665w" path="res://pickableItems/items/letter_bottle.tres" id="2_ptuhr"]
+[ext_resource type="Texture2D" uid="uid://0q8xacamsqgg" path="res://assets/items/letter_bottle.png" id="2_wc2sn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pn6ng"]
+radius = 20.025
+
+[node name="letter_bottle" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_40f42")
+item = ExtResource("2_ptuhr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pn6ng")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_wc2sn")
