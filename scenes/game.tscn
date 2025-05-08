@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=18 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
@@ -7,11 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://buplj38oofupe" path="res://assets/tileset/waves.png" id="5_gee14"]
 [ext_resource type="Texture2D" uid="uid://bhshnwragmdnq" path="res://assets/tileset/rock1.png" id="6_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
-[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sealed_letter.tscn" id="8_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="8_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="10_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="11_iywne"]
-
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("2_yqjtg")
