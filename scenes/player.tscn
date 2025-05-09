@@ -43,6 +43,8 @@
 [sub_resource type="GDScript" id="GDScript_g2els"]
 script/source = "extends CharacterBody2D
 
+class_name  Player
+
 @export var movement_speed: float = 500
 var character_direction: Vector2
 var last_direction: Vector2 = Vector2.DOWN
@@ -305,8 +307,9 @@ animations = [{
 "speed": 12.5
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
-radius = 14.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2b1d"]
+radius = 16.0
+height = 72.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 script = SubResource("GDScript_g2els")
@@ -322,6 +325,6 @@ frame_progress = 0.747794
 speed_scale = 2.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_qhqgy")
+shape = SubResource("CapsuleShape2D_j2b1d")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("38_t4otl")]
