@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d26dsls1n8w2s"]
+[gd_scene load_steps=4 format=3 uid="uid://d26dsls1n8w2s"]
 
 [ext_resource type="Texture2D" uid="uid://cyw6thno5n0nw" path="res://assets/items/chat_bubble.png" id="1_k0ki1"]
 [ext_resource type="Script" uid="uid://dhaft0uvpelj0" path="res://dialogue/dialogueplayer.gd" id="1_vigd0"]
+[ext_resource type="FontFile" uid="uid://b5c1pgjgtjbl4" path="res://UI/font/dogicabold.ttf" id="3_mwwob"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -14,7 +15,7 @@ script = ExtResource("1_vigd0")
 layout_mode = 0
 offset_left = -51.0
 offset_top = -138.0
-offset_right = 49.0
+offset_right = 119.0
 offset_bottom = -38.0
 texture = ExtResource("1_k0ki1")
 patch_margin_left = 3
@@ -26,15 +27,18 @@ patch_margin_bottom = 3
 layout_mode = 0
 offset_left = 2.0
 offset_top = 4.0
-offset_right = 97.0
-offset_bottom = 44.0
+offset_right = 168.0
+offset_bottom = 56.0
+scale = Vector2(0.78, 0.78)
+theme_override_fonts/normal_font = ExtResource("3_mwwob")
 text = "Name:"
 
 [node name="Text" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 30.0
-offset_right = 232.0
-offset_bottom = 220.0
-scale = Vector2(0.8, 0.8)
+offset_top = 25.0
+offset_right = 278.0
+offset_bottom = 215.0
+scale = Vector2(0.655, 0.655)
+theme_override_fonts/normal_font = ExtResource("3_mwwob")
 text = "Chatting"

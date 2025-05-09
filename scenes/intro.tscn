@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://ubyr2srdinyj"]
+
+[ext_resource type="Script" uid="uid://cd82t6fhac4os" path="res://scenes/intro.gd" id="1_ioskq"]
+[ext_resource type="FontFile" uid="uid://b5c1pgjgtjbl4" path="res://UI/font/dogicabold.ttf" id="2_yjqpq"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ioskq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -99.0
+offset_top = 94.0
+offset_right = 998.0
+offset_bottom = 590.0
+scale = Vector2(1.22, 1.22)
+theme_override_fonts/font = ExtResource("2_yjqpq")
+text = "I don’t know my name. 
+
+
+
+
+My limbs ache like I’ve been asleep for centuries. 
+
+
+
+
+There’s something wrong with the air… or with me.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Press enter to continue..."
+horizontal_alignment = 1

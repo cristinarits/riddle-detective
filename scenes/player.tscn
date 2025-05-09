@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://btkhkjvucyuqc"]
+[gd_scene load_steps=44 format=3 uid="uid://btkhkjvucyuqc"]
 
 [ext_resource type="Resource" uid="uid://dup2dp4nfhoj1" path="res://inventory/playerinv.tres" id="1_j2b1d"]
 [ext_resource type="Texture2D" uid="uid://bvnqm3yb32r33" path="res://assets/character/forward/protag_front_idle1.png" id="1_smehm"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://bbd84dpn77840" path="res://assets/character/left_walking/protag_left_walk18.png" id="23_giy8y"]
 [ext_resource type="Texture2D" uid="uid://bq0c2a1ple0s0" path="res://assets/character/left_walking/protag_left_walk19.png" id="24_fdfoy"]
 [ext_resource type="PackedScene" uid="uid://crsqcujg1yebf" path="res://interation_components/interacting_component.tscn" id="38_t4otl"]
+[ext_resource type="PackedScene" uid="uid://d26dsls1n8w2s" path="res://dialogue/dialogue.tscn" id="40_cs1tg"]
 
 [sub_resource type="GDScript" id="GDScript_g2els"]
 script/source = "extends CharacterBody2D
@@ -48,6 +49,9 @@ class_name  Player
 @export var movement_speed: float = 500
 var character_direction: Vector2
 var last_direction: Vector2 = Vector2.DOWN
+
+@onready var dialogue = get_node(\"/root/Game/dialogueplayergd\")  # Adjust path if needed
+
 
 @export var inv: Inv
 
@@ -328,3 +332,5 @@ speed_scale = 2.0
 shape = SubResource("CapsuleShape2D_j2b1d")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("38_t4otl")]
+
+[node name="Dialogue" parent="InteractingComponent" instance=ExtResource("40_cs1tg")]
