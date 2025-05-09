@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=19 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
+
+[sub_resource type="GDScript" id="GDScript_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("2_yqjtg")
@@ -372,6 +374,7 @@ sources/6 = SubResource("TileSetAtlasSource_ir15t")
 sources/3 = SubResource("TileSetAtlasSource_kvpfn")
 
 [node name="Game" type="Node2D"]
+script = SubResource("GDScript_vtaks")
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 1
