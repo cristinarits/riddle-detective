@@ -312,8 +312,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2b1d"]
-radius = 16.0
-height = 72.0
+radius = 14.0
+height = 36.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 script = SubResource("GDScript_g2els")
@@ -329,8 +329,11 @@ frame_progress = 0.747794
 speed_scale = 2.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 23)
+rotation = -1.5708
 shape = SubResource("CapsuleShape2D_j2b1d")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("38_t4otl")]
 
 [node name="Dialogue" parent="InteractingComponent" instance=ExtResource("40_cs1tg")]
+position = Vector2(0, 1)
