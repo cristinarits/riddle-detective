@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3v2mcaultquo"]
+
+[ext_resource type="Script" uid="uid://bcmjdjbws3s76" path="res://npc.gd" id="1_xxcha"]
+[ext_resource type="Texture2D" uid="uid://cgc4of0y21qs" path="res://assets/character/vnm_inkteller_idle.png" id="2_kh24r"]
+[ext_resource type="PackedScene" uid="uid://d26dsls1n8w2s" path="res://dialogue/dialogue.tscn" id="3_kh24r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bc6q4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kh24r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ul7y6"]
+radius = 200.0
+height = 2500.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcvl2"]
+radius = 900.0
+height = 3828.0
+
+[node name="npc" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.02)
+script = ExtResource("1_xxcha")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bc6q4")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(80, 50)
+shape = SubResource("CapsuleShape2D_ul7y6")
+
+[node name="chat_detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area"]
+position = Vector2(19.9999, 1.52588e-05)
+shape = SubResource("CapsuleShape2D_mcvl2")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Dialogue" parent="." instance=ExtResource("3_kh24r")]
+offset_left = 100.0
+offset_top = -600.0
+offset_right = 200.0
+offset_bottom = -500.0
+scale = Vector2(40, 40)
+
+[connection signal="dialogue_finished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]
