@@ -1,5 +1,6 @@
 extends Control
 
+<<<<<<< Updated upstream
 @onready var notes_container = $Panel/VBoxContainer/NotesContainer/VBoxContainer
 
 func _ready():
@@ -48,3 +49,49 @@ func create_note_panel(note):
 	panel.add_child(vbox)
 	
 	return panel
+=======
+@onready var notes_list = $Panel/VBoxContainer/HBoxContainer/NotesList
+@onready var title_label = $Panel/VBoxContainer/HBoxContainer/NoteContent/TitleLabel
+@onready var content_label = $Panel/VBoxContainer/HBoxContainer/NoteContent/ContentLabel
+
+func _ready():
+	visible = false
+	update_journal()
+	
+	# Подключаем сигналы
+	notes_list.item_selected.connect(_on_note_selected)
+	$Panel/VBoxContainer/CloseButton.pressed.connect(hide)
+
+func update_journal():
+	notes_list.clear()
+	var notes = JournalManager.get_notes()
+	
+	if notes.is_empty():
+		title_label.text = "Journal is empty"
+		content_label.text = "Interact with characters to gather information"
+		return
+	
+	for note in notes:
+		notes_list.add_item(note["title"])
+
+func _on_note_selected(index: int):
+	var note = JournalManager.get_notes()[index]
+	title_label.text = note["title"]
+	content_label.text = note["content"]
+
+func open():
+	update_journal()
+	visible = true
+	notes_list.grab_focus()
+	if notes_list.item_count > 0:
+		notes_list.select(0)
+		_on_note_selected(0)
+
+func _unhandled_input(event):
+	if event.is_action_pressed("journal"):
+		if visible:
+			hide()
+		else:
+			open()
+		get_viewport().set_input_as_handled()
+>>>>>>> Stashed changes
