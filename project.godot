@@ -32,12 +32,12 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"dialogues/inkteller": "res://dialogues/inkteller.dtl",
+"dialogues/mia_baker": "res://dialogues/mia_baker.dtl",
 "flashback1": "res://dialogues/flashback1.dtl",
 "flashback2": "res://dialogues/flashback2.dtl",
 "flashback3": "res://dialogues/flashback3.dtl",
-"flashback4": "res://assets/background/flashback4.dtl",
-"inkteller": "res://dialogues/inkteller.dtl",
-"mia_baker": "res://dialogues/mia_baker.dtl"
+"flashback4": "res://assets/background/flashback4.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://custom_style.tres"]
