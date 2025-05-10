@@ -2,7 +2,9 @@ join Lia left
 join Inkteller right
 Inkteller: Ah. Thistle. I wondered when you’d crawl back.
 Lia: Thistle? I… I need answers.
+join journal center
 Inkteller pulls out a locked journal
+leave journal
 Inkteller: This is yours.
 Inkteller: You forced me to hide it from you.
 Inkteller: Said it was becoming dangerous.
