@@ -377,27 +377,6 @@ sources/3 = SubResource("TileSetAtlasSource_kvpfn")
 [node name="Game" type="Node2D"]
 script = SubResource("GDScript_vtaks")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="NoteUI" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
-offset_left = 10.0
-offset_top = 1.0
-offset_right = 228.0
-offset_bottom = 158.0
-
-[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("9_lbhrr")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -148.5
-offset_top = -48.0
-offset_right = 148.5
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 0
-
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 1
 position = Vector2(-101, 13)
@@ -446,6 +425,27 @@ tile_set = SubResource("TileSet_lnu2h")
 use_parent_material = true
 tile_set = SubResource("TileSet_lnu2h")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("9_lbhrr")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.5
+offset_top = -48.0
+offset_right = 148.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NoteUI" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
+offset_left = 933.0
+offset_top = -1.0
+offset_right = 973.0
+offset_bottom = 39.0
+
 [node name="doors" type="Node" parent="."]
 
 [node name="door_W" parent="doors" instance=ExtResource("9_0tnpc")]
@@ -459,5 +459,7 @@ position = Vector2(-45, 0)
 
 [node name="npc" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(162, -28)
+note_title = "Новая запись"
+note_content = "Информация, полученная от этого персонажа"
 
 [editable path="doors/door_W"]

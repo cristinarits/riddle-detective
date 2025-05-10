@@ -15,12 +15,15 @@ var start_pos
 var is_roaming = true
 var is_chatting = false
 
+@export var note_title := "New note"
+@export_multiline var note_content := "New clue and information"
+@export var add_to_journal := true
+
 func _ready():
 	randomize()
 	start_pos = position
 
 func _process(delta):
-	# Animation handling
 	if current_state == IDLE or current_state == NEW_DIR:
 		$AnimatedSprite2D.play("idle")
 	elif current_state == MOVE and !is_chatting:
@@ -33,7 +36,6 @@ func _process(delta):
 		elif dir.y == 1:
 			$AnimatedSprite2D.play("walk_s")
 
-	# Movement logic
 	if is_roaming:
 		match current_state:
 			IDLE:
@@ -43,15 +45,10 @@ func _process(delta):
 			MOVE:
 				move(delta)
 
-	# ✅ Chat interaction using group and distance check
 	if Input.is_action_just_pressed("chat"):
 		var player = get_tree().get_first_node_in_group("player")
-		if player and position.distance_to(player.position) < 32: # Adjust the distance as needed
-			print("chatting with npc")
-			$Dialogue.start()
-			is_roaming = false
-			is_chatting = true
-			$AnimatedSprite2D.play("idle")
+		if player and position.distance_to(player.position) < 32:
+			start_chat()
 
 func move(delta):
 	if !is_chatting:
@@ -65,6 +62,27 @@ func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5, 1, 1.5])
 	current_state = choose([IDLE, NEW_DIR, MOVE])
 
+func start_chat():
+	$Dialogue.start()
+	is_roaming = false
+	is_chatting = true
+	$AnimatedSprite2D.play("idle")
+
 func _on_dialogue_dialogue_finished() -> void:
 	is_chatting = false
 	is_roaming = true
+	show_note_after_chat()
+
+func show_note_after_chat():
+	if note_title.is_empty() or note_content.is_empty():
+		return
+		
+	var note_scene = preload("res://UI/note_ui.tscn").instantiate()
+	note_scene.name = "CurrentNote" 
+	get_tree().root.add_child(note_scene)
+	
+	await get_tree().process_frame
+	note_scene.open(note_title, note_content)
+	
+	if add_to_journal and has_node("/root/JournalManager"):
+		JournalManager.add_note(note_title, note_content)

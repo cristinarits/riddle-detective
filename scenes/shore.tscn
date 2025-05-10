@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://v64h4oyrc30e"]
+[gd_scene load_steps=30 format=4 uid="uid://v64h4oyrc30e"]
 
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="1_tuc82"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_a81o0"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="8_a81o0"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="9_w8k8i"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="10_yhopk"]
+[ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="12_5evtj"]
+[ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="12_oah6v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5evtj"]
 texture = ExtResource("6_5evtj")
@@ -1710,5 +1712,26 @@ position = Vector2(0, -39)
 
 [node name="player" parent="." instance=ExtResource("10_yhopk")]
 position = Vector2(529, 543)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("12_oah6v")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.5
+offset_top = -48.0
+offset_right = 148.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NoteUI" parent="CanvasLayer" instance=ExtResource("12_5evtj")]
+offset_left = 933.0
+offset_top = -1.0
+offset_right = 973.0
+offset_bottom = 39.0
 
 [editable path="Door/Door_shore"]

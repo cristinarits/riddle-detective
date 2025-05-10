@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 NavigationManager="*res://script/navigation_manager.gd"
+JournalManager="*res://journal_manager.gd"
 
 [display]
 
