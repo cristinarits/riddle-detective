@@ -16,7 +16,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ul7y6"]
 radius = 150.0
-height = 300.0
+height = 1000.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcvl2"]
 radius = 900.0

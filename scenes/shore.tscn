@@ -1703,6 +1703,7 @@ position = Vector2(907, 281)
 [node name="Door_shore" parent="Door" instance=ExtResource("9_w8k8i")]
 position = Vector2(530, 617)
 door_tag = "S"
+destination_level_tag = "observatorysl"
 destination_door_tag = "W"
 spawn_direction = "left"
 
