@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://c4yt7ohpguas"]
+[gd_scene load_steps=49 format=4 uid="uid://c4yt7ohpguas"]
 
 [ext_resource type="PackedScene" uid="uid://vfdqrrvs4ghq" path="res://inkteller.tscn" id="1_ebf3q"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_s7v22"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://c8jq1wu6wwhhp" path="res://assets/tileset/stuff.png" id="14_bw3jd"]
 [ext_resource type="Texture2D" uid="uid://cqweqtsl4ukh8" path="res://assets/tileset/cobblestone-floor.png" id="15_urwip"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="18_u4dd8"]
+[ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="19_kb140"]
+[ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="20_twebl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyo7q"]
 texture = ExtResource("1_s7v22")
@@ -1779,6 +1781,28 @@ spawn_direction = "right"
 
 [node name="Spawn" parent="Door" index="1"]
 position = Vector2(1, -61)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NoteUI" parent="CanvasLayer" instance=ExtResource("19_kb140")]
+offset_left = -609.0
+offset_top = -318.0
+offset_right = -391.0
+offset_bottom = -161.0
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("20_twebl")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.5
+offset_top = -48.0
+offset_right = 148.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [editable path="TileMap/loft/inkteller"]
 [editable path="Door"]
