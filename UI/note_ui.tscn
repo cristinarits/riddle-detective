@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://e8h8mjbjwrvv"]
+[gd_scene load_steps=4 format=3 uid="uid://e8h8mjbjwrvv"]
 
 [ext_resource type="Script" uid="uid://wp6b1hsn2q4c" path="res://UI/note_ui.gd" id="1_ngchy"]
+[ext_resource type="Texture2D" uid="uid://csefmvulajuw" path="res://UI/704727a93ecbd9cb802b666dc7ae8f08_t.jpeg" id="2_qu2hg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_equkj"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="NoteUI" type="Control"]
 layout_mode = 3
@@ -14,6 +18,11 @@ layout_mode = 0
 offset_right = 218.0
 offset_bottom = 159.0
 
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(110.5, 82)
+scale = Vector2(0.5, 0.494118)
+texture = ExtResource("2_qu2hg")
+
 [node name="CloseButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 162.0
@@ -26,9 +35,12 @@ text = "close"
 layout_mode = 0
 offset_right = 158.0
 offset_bottom = 38.0
+label_settings = SubResource("LabelSettings_equkj")
 
 [node name="ContentLabel" type="RichTextLabel" parent="Panel"]
-layout_mode = 0
 offset_top = 45.0
 offset_right = 214.0
 offset_bottom = 153.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

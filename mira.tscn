@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3v2mcaultquo"]
+[gd_scene load_steps=6 format=3 uid="uid://cnyrsmhrau8nx"]
 
-[ext_resource type="Script" uid="uid://bcmjdjbws3s76" path="res://mira.gd" id="1_xxcha"]
+[ext_resource type="Script" path="res://mira.gd" id="1_xxcha"]
 [ext_resource type="Texture2D" uid="uid://d33wmluow44yt" path="res://characters/mira.png" id="2_6226f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bc6q4"]
@@ -16,7 +16,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ul7y6"]
 radius = 150.0
-height = 300.0
+height = 1000.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mcvl2"]
 radius = 900.0
@@ -27,6 +27,8 @@ scale = Vector2(0.05, 0.02)
 script = ExtResource("1_xxcha")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24.9999)
+scale = Vector2(1.125, 1.125)
 sprite_frames = SubResource("SpriteFrames_bc6q4")
 animation = &"idle"
 

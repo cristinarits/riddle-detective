@@ -15,7 +15,7 @@ var interact: Callable = func():
 		print("Note scene loaded: ", note_scene != null)
 		var note = note_scene.instantiate()
 		get_tree().root.add_child(note)
-		note.open("Found Item", "a bottle? with... a message!")
+		note.open("", "If you ever get lost, follow the shoreline. You always said the sea sounded like your name.")
 		
 		queue_free()
 	else:
