@@ -2,6 +2,7 @@ extends Node
 
 const scene_game = preload("res://scenes/game.tscn")
 const scene_shore = preload("res://scenes/shore.tscn")
+const scene_observatory = preload("res://scenes/observatory.tscn")
 
 signal on_trigger_player_spawn
 
@@ -13,6 +14,8 @@ func go_to_level(level_tag, destination_tag):
 	match level_tag:
 		"game":
 			scene_to_load = scene_game
+		"observatory":
+			scene_to_load = scene_observatory
 		"shore":
 			scene_to_load = scene_shore
 

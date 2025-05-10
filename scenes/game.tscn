@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=19 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://b3v2mcaultquo" path="res://mira.tscn" id="11_dinhu"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="11_kvpfn"]
 
 [sub_resource type="GDScript" id="GDScript_vtaks"]
@@ -24,18 +23,18 @@ func _on_level_spawn(destination_tag: String):
 	var target_door = null
 	
 	for door in doors:
-		if door.door_tag == destination_tag: # fixed this line!
+		if door.door_tag == destination_tag:
 			target_door = door
 			break
 	
 	if target_door:
-		var player = get_node(\"player\") # ensure path is correct
+		var player = get_node(\"player\")
 		player.global_position = target_door.spawn.global_position
 		NavigationManager.spawn_door_tag = null
 	else:
 		print(\"Door with CURRENT SCENE tag '%s' not found!\" % destination_tag)
 		for door in doors:
-			print(\"Available door_tag: \", door.door_tag) # debugging helper
+			print(\"Available door_tag: \", door.door_tag)
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
@@ -476,15 +475,15 @@ tile_set = SubResource("TileSet_lnu2h")
 
 [node name="door_W" parent="doors" instance=ExtResource("9_0tnpc")]
 position = Vector2(580, -7)
-destination_level_tag = "shore"
-destination_door_tag = "E"
-spawn_direction = "down"
+door_tag = "G"
+destination_level_tag = "observatory"
+destination_door_tag = "O"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="doors/door_W" index="0"]
+position = Vector2(1, 2)
 
 [node name="Spawn" parent="doors/door_W" index="1"]
-position = Vector2(-45, 0)
-
-[node name="mira" parent="." instance=ExtResource("11_dinhu")]
-position = Vector2(168, -119)
-scale = Vector2(0.055, 0.04)
+position = Vector2(-91, 1)
 
 [editable path="doors/door_W"]
