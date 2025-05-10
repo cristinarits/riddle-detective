@@ -384,6 +384,7 @@ offset_left = 10.0
 offset_top = 1.0
 offset_right = 228.0
 offset_bottom = 158.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("9_lbhrr")]
 anchors_preset = 7
@@ -397,6 +398,7 @@ offset_right = 148.5
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 1
