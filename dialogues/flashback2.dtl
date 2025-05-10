@@ -1,0 +1,9 @@
+[background arg="res://assets/background/scene2.png" fade="0.0"]
+join Lia left
+join Callum right
+Lia: Just say yes. I can take it.
+Lia: I’ll carry it for both of us.
+Callum: What happens when you forget what you’re carrying?
+Lia: Then you’ll remind me.
+[wait time="1.0"]
+Lia: Right?

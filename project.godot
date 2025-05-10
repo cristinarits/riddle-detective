@@ -25,14 +25,19 @@ TransitionScreen="*res://scenes/transition_screen.tscn"
 [dialogic]
 
 directories/dch_directory={
+"Callum": "res://characters/Callum.dch",
 "Inkteller": "res://characters/Inkteller.dch",
 "Lia": "res://characters/Lia.dch",
 "Mira the Baker": "res://characters/Mira the Baker.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"inkteller": "res://characters/inkteller.dtl",
-"mia_baker": "res://characters/mia_baker.dtl"
+"flashback1": "res://dialogues/flashback1.dtl",
+"flashback2": "res://dialogues/flashback2.dtl",
+"flashback3": "res://dialogues/flashback3.dtl",
+"flashback4": "res://assets/background/flashback4.dtl",
+"inkteller": "res://dialogues/inkteller.dtl",
+"mia_baker": "res://dialogues/mia_baker.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://custom_style.tres"]
