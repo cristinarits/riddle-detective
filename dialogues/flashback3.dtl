@@ -1,7 +1,7 @@
 [background arg="res://assets/background/scene3.png" fade="0.0"]
 join Lia left
 join Callum right
-[sound path="res://assets/sounds/Audio/Ice_Barrage.ogg" volume="0.5"]
+[sound path="res://assets/sounds/Audio/Ice_Barrage.ogg" volume="0.1"]
 [wait time="2.0"]
 Callum: R–Rel…
 [wait time="1.0"]
@@ -10,4 +10,4 @@ Callum: Something’s wrong—
 Lia: No, no, stay with me—
 Lia: This wasn’t how it’s supposed to—
 leave Callum
-jump flashback4/
+jump dialogues/flashback4/
