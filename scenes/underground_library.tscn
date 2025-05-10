@@ -1767,5 +1767,6 @@ tile_set = SubResource("TileSet_16a5h")
 
 [node name="player" parent="." instance=ExtResource("2_xbocd")]
 position = Vector2(590, 566)
+movement_speed = 300.0
 
 [editable path="TileMap/loft/inkteller"]

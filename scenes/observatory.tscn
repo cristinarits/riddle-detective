@@ -1682,6 +1682,7 @@ tile_set = SubResource("TileSet_ruf66")
 
 [node name="player" parent="." instance=ExtResource("11_m7377")]
 position = Vector2(81, 322)
+movement_speed = 300.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
