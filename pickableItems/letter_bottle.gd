@@ -1,7 +1,7 @@
 extends Area2D
 class_name LetterBottle
 
-@export var interact_name: String = "Sea Glass"
+@export var interact_name: String = "Message in a bottle"
 @export var is_interactable: bool = true
 @export var item: InvItem
 
@@ -15,7 +15,7 @@ var interact: Callable = func():
 		print("Note scene loaded: ", note_scene != null)
 		var note = note_scene.instantiate()
 		get_tree().root.add_child(note)
-		note.open("Found Item", "The seaglass shore")
+		note.open("Found Item", "a bottle? with... a message!")
 		
 		queue_free()
 	else:
