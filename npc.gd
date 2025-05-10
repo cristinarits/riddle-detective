@@ -46,9 +46,7 @@ func _process(delta):
 				move(delta)
 
 	if Input.is_action_just_pressed("chat"):
-		var player = get_tree().get_first_node_in_group("player")
-		if player and position.distance_to(player.position) < 32:
-			start_chat()
+		Dialogic.start("mia_baker")
 
 func move(delta):
 	if !is_chatting:

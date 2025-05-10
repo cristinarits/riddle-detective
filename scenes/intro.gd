@@ -18,8 +18,6 @@ func typing_loop() -> void:
 		await get_tree().create_timer(typing_speed).timeout
 
 func _input(event):
-	# Check if the event is a key press and the key is "Enter"
 	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_ENTER:
-			# When "Enter" is pressed, change to the next scene
+		if event.keycode == KEY_E:
 			get_tree().change_scene_to_file("res://scenes/game.tscn")
