@@ -2,10 +2,12 @@
 join Lia left
 join Callum right
 Callum: [b]You’re not listening, Rel! [/b] You can’t fix everything with a spell.
-Callum:  Some pain matters.
+Callum: Some pain matters.
 [wait time="1.0"]
 Callum: Some pain should stay...
 Lia: But you matter!
 Lia: I can’t just watch you fall apart!
 Callum: You’re not doing this for me.
 Callum: You’re doing it because you can’t bear to remember.
+[wait time="1.0"]
+jump flashback2/

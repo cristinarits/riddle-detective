@@ -51,6 +51,12 @@ var last_direction: Vector2 = Vector2.DOWN
 
 @export var inv: Inv
 
+
+func _process(_delta):
+	if Input.is_action_just_pressed(\"journal\"):
+		Dialogic.start(\"end\")
+
+
 func _physics_process(delta):
 	character_direction = Vector2.ZERO
 

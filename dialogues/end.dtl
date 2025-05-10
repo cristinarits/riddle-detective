@@ -1,0 +1,5 @@
+[text_input text="What is my name?" var="name"]
+if {name} == "Aurelia Thorne":
+	jump flashback1/
+else:
+	[end_timeline]
