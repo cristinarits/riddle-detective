@@ -1718,7 +1718,4 @@ position = Vector2(2, 0)
 [node name="Spawn" parent="Door_O" index="1"]
 position = Vector2(75, -2)
 
-[node name="Door_OS" parent="." instance=ExtResource("10_naw1k")]
-
 [editable path="Door_O"]
-[editable path="Door_OS"]
