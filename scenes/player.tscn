@@ -325,9 +325,8 @@ inv = ExtResource("1_j2b1d")
 unique_name_in_owner = true
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"idle_back"
+animation = &"idle_front"
 autoplay = "idle_front"
-frame_progress = 0.747794
 speed_scale = 2.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
