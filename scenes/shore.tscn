@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://v64h4oyrc30e"]
+[gd_scene load_steps=32 format=4 uid="uid://v64h4oyrc30e"]
 
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="1_tuc82"]
 [ext_resource type="Script" uid="uid://c58t5x1b5rni0" path="res://scenes/shore.gd" id="1_x2efu"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="10_yhopk"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="12_5evtj"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="12_oah6v"]
+[ext_resource type="PackedScene" uid="uid://dhm2ihje0smfj" path="res://pickableItems/flat_stone.tscn" id="15_cv2hm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5evtj"]
 texture = ExtResource("6_5evtj")
@@ -1740,5 +1741,8 @@ offset_bottom = 39.0
 
 [node name="SeaGlass" parent="." instance=ExtResource("8_a81o0")]
 position = Vector2(93, 335)
+
+[node name="Area2D" parent="." instance=ExtResource("15_cv2hm")]
+position = Vector2(1110, 435)
 
 [editable path="Door/Door_shore"]

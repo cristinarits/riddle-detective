@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhm2ihje0smfj"]
+
+[ext_resource type="Script" uid="uid://dty7wdn3niq81" path="res://pickableItems/flat_stone.gd" id="1_0b8yp"]
+[ext_resource type="Texture2D" uid="uid://5itgc5ho2dcb" path="res://assets/items/flat_rock.png" id="2_ftjby"]
+[ext_resource type="Resource" uid="uid://bxss1ejt8lsbn" path="res://pickableItems/items/flat_stone.tres" id="2_r2wx8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2wx8"]
+radius = 19.0263
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_0b8yp")
+item = ExtResource("2_r2wx8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r2wx8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_ftjby")
