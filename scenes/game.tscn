@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=20 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://b3v2mcaultquo" path="res://mira.tscn" id="11_dinhu"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="11_kvpfn"]
 
 [sub_resource type="GDScript" id="GDScript_vtaks"]
@@ -481,5 +482,9 @@ spawn_direction = "down"
 
 [node name="Spawn" parent="doors/door_W" index="1"]
 position = Vector2(-45, 0)
+
+[node name="mira" parent="." instance=ExtResource("11_dinhu")]
+position = Vector2(168, -119)
+scale = Vector2(0.055, 0.04)
 
 [editable path="doors/door_W"]
