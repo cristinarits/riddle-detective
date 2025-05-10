@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=21 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cnyrsmhrau8nx" path="res://mira.tscn" id="11_dinhu"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://h8k7r1eqc3ie" path="res://UI/fog_block.tscn" id="12_dinhu"]
 
 [sub_resource type="GDScript" id="GDScript_vtaks"]
 script/source = "extends Node2D
@@ -475,16 +476,16 @@ tile_set = SubResource("TileSet_lnu2h")
 
 [node name="doors" type="Node" parent="."]
 
-[node name="door_W" parent="doors" instance=ExtResource("9_0tnpc")]
+[node name="door_G" parent="doors" instance=ExtResource("9_0tnpc")]
 position = Vector2(71, 374)
 door_tag = "G"
 destination_level_tag = "observatory"
 destination_door_tag = "O"
 
-[node name="CollisionShape2D" parent="doors/door_W" index="0"]
+[node name="CollisionShape2D" parent="doors/door_G" index="0"]
 position = Vector2(1, -1)
 
-[node name="Spawn" parent="doors/door_W" index="1"]
+[node name="Spawn" parent="doors/door_G" index="1"]
 position = Vector2(1, -82)
 
 [node name="Door_R" parent="doors" instance=ExtResource("9_0tnpc")]
@@ -525,8 +526,44 @@ scale = Vector2(0.07, 0.05)
 position = Vector2(-14.2857, -52.1933)
 scale = Vector2(0.785, 1.055)
 
-[editable path="doors/door_W"]
+[node name="Node" type="Node" parent="."]
+
+[node name="fog_block_R" parent="Node" instance=ExtResource("12_dinhu")]
+position = Vector2(-185, -298)
+
+[node name="CollisionShape2D" parent="Node/fog_block_R" index="0"]
+position = Vector2(0, -1)
+
+[node name="Fog" parent="Node/fog_block_R" index="1"]
+position = Vector2(7.62939e-06, 1)
+scale = Vector2(0.1625, 0.196529)
+
+[node name="fog_block_G" parent="Node" instance=ExtResource("12_dinhu")]
+position = Vector2(-4, 282)
+
+[node name="CollisionShape2D" parent="Node/fog_block_G" index="0"]
+position = Vector2(76, 21)
+
+[node name="Fog" parent="Node/fog_block_G" index="1"]
+position = Vector2(76, 11)
+rotation = -3.14159
+
+[node name="fog_block_U" parent="Node" instance=ExtResource("12_dinhu")]
+position = Vector2(494, -38)
+
+[node name="CollisionShape2D" parent="Node/fog_block_U" index="0"]
+position = Vector2(95, 51)
+
+[node name="Fog" parent="Node/fog_block_U" index="1"]
+position = Vector2(76.5, 51.3796)
+rotation = 1.5708
+scale = Vector2(0.12421, 0.212946)
+
+[editable path="doors/door_G"]
 [editable path="doors/Door_R"]
 [editable path="doors/Door_U"]
 [editable path="doors/Door_Ink"]
 [editable path="mira"]
+[editable path="Node/fog_block_R"]
+[editable path="Node/fog_block_G"]
+[editable path="Node/fog_block_U"]

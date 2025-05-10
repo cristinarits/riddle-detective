@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://h8k7r1eqc3ie"]
+
+[ext_resource type="Texture2D" uid="uid://cnfwewwffmjxp" path="res://assets/items/fog.png" id="1_4bymb"]
+[ext_resource type="Script" uid="uid://dlax56gifqofi" path="res://UI/fog_block.gd" id="1_d3c1b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bymb"]
+size = Vector2(112, 100)
+
+[node name="FogBlock" type="StaticBody2D"]
+script = ExtResource("1_d3c1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(76.5, 56)
+shape = SubResource("RectangleShape2D_4bymb")
+
+[node name="Fog" type="Sprite2D" parent="."]
+position = Vector2(76.5, 55.25)
+scale = Vector2(0.18625, 0.212946)
+texture = ExtResource("1_4bymb")
