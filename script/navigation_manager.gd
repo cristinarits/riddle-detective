@@ -4,6 +4,7 @@ const scene_game = preload("res://scenes/game.tscn")
 const scene_shore = preload("res://scenes/shore.tscn")
 const scene_observatory = preload("res://scenes/observatory.tscn")
 const scene_loft = preload("res://scenes/loft.tscn")
+const scene_underground = preload("res://scenes/underground_library.tscn")
 
 signal on_trigger_player_spawn
 
@@ -21,6 +22,8 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_shore
 		"loft":
 			scene_to_load = scene_loft
+		"underground_library":
+			scene_to_load = scene_underground
 
 	if scene_to_load != null:
 		TransitionScreen.transition()

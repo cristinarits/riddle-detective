@@ -1705,7 +1705,7 @@ position = Vector2(530, 617)
 door_tag = "S"
 destination_level_tag = "game"
 destination_door_tag = "R"
-spawn_direction = "left"
+spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Door/Door_shore" index="0"]
 position = Vector2(-1, 28)

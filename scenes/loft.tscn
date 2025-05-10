@@ -1756,7 +1756,7 @@ position = Vector2(580, 621)
 door_tag = "L"
 destination_level_tag = "game"
 destination_door_tag = "U"
-spawn_direction = "down"
+spawn_direction = "left"
 
 [node name="Spawn" parent="Door" index="1"]
 position = Vector2(0, -61)
