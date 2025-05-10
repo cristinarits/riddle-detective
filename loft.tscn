@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://dotq58vmj25j6"]
+[gd_scene load_steps=43 format=4 uid="uid://pnhp5nr7n0p7"]
 
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_rcodm"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_pdhta"]
@@ -12,11 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://b5d8fqmyeptj5" path="res://assets/tileset/window.png" id="10_hmgk4"]
 [ext_resource type="Texture2D" uid="uid://dhaa7yg8jwcgf" path="res://assets/tileset/bookshelf.png" id="11_gh440"]
 [ext_resource type="Texture2D" uid="uid://d1vc3j2ydw617" path="res://assets/tileset/parchment.png" id="12_q36xp"]
-[ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="13_4cqg6"]
 [ext_resource type="Texture2D" uid="uid://b2ye3df2rfh62" path="res://assets/tileset/black-background.png" id="13_l6gn8"]
-[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="14_16ypa"]
 [ext_resource type="Texture2D" uid="uid://c8jq1wu6wwhhp" path="res://assets/tileset/stuff.png" id="14_j7uvy"]
-[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="15_0o5ui"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="16_1sr6s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7uvy"]
@@ -1749,27 +1746,5 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAAlABUAAAAKABQAAAAgABUAAAAMAA0AAAAmABQAAAAOAA0AAAAiABQACwAAAAAAAAAWABIACwAAAAAAAFAyABwACwAAAAAAAEAhABcADQAAAAAAAAAsAAsADQAAAAAAAAAjABYADQACAAAAAAAWAB0ADQACAAAAAAAcAAwADQACAAAAAAAlABcADQAEAAAAAAAyABgADQAEAAAAAAAmABYADQAIAAAAAAAdAAwADQAIAAAAAAAWABMADQAIAAAAAAAxACAADQAAAAIAAAAXACAADQAAAAIAAAAuABAADQACAAIAABAgABYADQAEAAIAABAyABkADQAEAAIAABAkABcADQAGAAMAAAAyABcADQAGAAMAAAAjABcADQAGAAIAAAAWABEADQAGAAIAAAAdACEADQAGAAIAAAAgABMADQAHAAIAAAAqACAADQAJAAIAAAAvABMADQAJAAMAAAAiABAADQAJAAMAAAAXABgADQACAAUAAAAaACIADQACAAUAAFAyACEADQACAAcAAAAxABsADQAGAAQAAAAoABsADQAGAAQAAAAmAA4ADQAIAAQAAAAnAAwADQAHAAgAAAArAAsADQAHAAgAAAAqAAsADQAIAAgAAAAoAA4ADQAIAAgAAAAnAA8ADQAGAAgAAAArAAoADQAGAAgAAAAeAAsADQAGAAgAAAArAAwADQAJAAgAAAAdAAoADQAJAAgAAAAvABkADQAEAAUAAAAwABwADQAEAAcAAAApACEADQAEAAcAAAAYABwADQAEAAMAAAAxABUADQAEAAMAAAAfABAADQAEAAcAAAAXABUADQAIAAgAAAAuABsADQAIAAgAAAAqAAwADQAJAAgAAAAoAA0ADQAJAAgAAAAcAAsADQAJAAgAAAAdAAsADQAGAAcAAAAsAAwADQAGAAcAAAAmAA8ADQAGAAcAAAAeAAwADQAEAAIAAAAqAAoADQAEAAIAAAAsAAoADQAGAAQAAAAcAAoADQAGAAQAAAAZABcADQAGAAAAAAA=")
 tile_set = SubResource("TileSet_ruf66")
 
-[node name="letter_bottle" parent="." instance=ExtResource("13_4cqg6")]
-position = Vector2(681, 460)
-
-[node name="SeaGlass" parent="." instance=ExtResource("14_16ypa")]
-position = Vector2(472, 450)
-
-[node name="Door" type="Node" parent="."]
-
-[node name="Door_shore" parent="Door" instance=ExtResource("15_0o5ui")]
-position = Vector2(530, 617)
-destination_level_tag = "game"
-destination_door_tag = "W"
-spawn_direction = "left"
-
-[node name="CollisionShape2D" parent="Door/Door_shore" index="0"]
-position = Vector2(54, -39)
-
-[node name="Spawn" parent="Door/Door_shore" index="1"]
-position = Vector2(0, -39)
-
 [node name="player" parent="." instance=ExtResource("16_1sr6s")]
 position = Vector2(568, 485)
-
-[editable path="Door/Door_shore"]

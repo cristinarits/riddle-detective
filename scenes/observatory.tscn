@@ -1684,6 +1684,7 @@ tile_set = SubResource("TileSet_ruf66")
 position = Vector2(81, 322)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="NoteUI" parent="CanvasLayer" instance=ExtResource("17_w0wix")]
 offset_left = 10.0
@@ -1713,9 +1714,9 @@ destination_door_tag = "G"
 spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Door_O" index="0"]
-position = Vector2(2, 0)
+position = Vector2(592, 296)
 
 [node name="Spawn" parent="Door_O" index="1"]
-position = Vector2(75, -2)
+position = Vector2(585, 215)
 
 [editable path="Door_O"]
