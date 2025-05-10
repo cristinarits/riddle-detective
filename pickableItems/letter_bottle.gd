@@ -9,7 +9,7 @@ var interact: Callable = func():
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		player.collect(item)
-		print("You picked up the sealed letter.")
+		print("You picked up letter bottle.")
 		
 		var note_scene = preload("res://UI/note_ui.tscn")
 		print("Note scene loaded: ", note_scene != null)
