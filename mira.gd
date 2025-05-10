@@ -22,6 +22,7 @@ var is_chatting = false
 func _ready():
 	randomize()
 	start_pos = position
+	Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 
 func _process(delta):
 	if current_state == IDLE or current_state == NEW_DIR:
@@ -46,7 +47,9 @@ func _process(delta):
 				move(delta)
 
 	if Input.is_action_just_pressed("chat"):
-		Dialogic.start("mia_baker")
+		var player = get_tree().get_first_node_in_group("player")
+		if player and position.distance_to(player.position) < 32:
+			start_chat()
 
 func move(delta):
 	if !is_chatting:
@@ -61,12 +64,12 @@ func _on_timer_timeout():
 	current_state = choose([IDLE, NEW_DIR, MOVE])
 
 func start_chat():
-	$Dialogue.start()
+	Dialogic.start("mia_baker")
 	is_roaming = false
 	is_chatting = true
 	$AnimatedSprite2D.play("idle")
 
-func _on_dialogue_dialogue_finished() -> void:
+func _on_dialogic_timeline_ended():
 	is_chatting = false
 	is_roaming = true
 	show_note_after_chat()
@@ -74,13 +77,25 @@ func _on_dialogue_dialogue_finished() -> void:
 func show_note_after_chat():
 	if note_title.is_empty() or note_content.is_empty():
 		return
+	
+	if not ResourceLoader.exists("res://UI/note_ui.tscn"):
+		push_error("NoteUI scene not found at path: res://UI/note_ui.tscn")
+		return
 		
 	var note_scene = preload("res://UI/note_ui.tscn").instantiate()
-	note_scene.name = "CurrentNote" 
+	note_scene.name = "CurrentNote"
+	
 	get_tree().root.add_child(note_scene)
 	
 	await get_tree().process_frame
-	note_scene.open(note_title, note_content)
+	
+	if note_scene.has_method("open"):
+		note_scene.open(note_title, note_content)
+	else:
+		push_error("NoteUI instance doesn't have open() method")
 	
 	if add_to_journal and has_node("/root/JournalManager"):
 		JournalManager.add_note(note_title, note_content)
+
+	print("Note shown. Title: ", note_title)
+	print("Note content: ", note_content)
