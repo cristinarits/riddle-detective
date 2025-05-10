@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ye3df2rfh62" path="res://assets/tileset/black-background.png" id="13_l6gn8"]
 [ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="14_16ypa"]
 [ext_resource type="Texture2D" uid="uid://c8jq1wu6wwhhp" path="res://assets/tileset/stuff.png" id="14_j7uvy"]
-[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="15_0o5ui"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="15_0o5ui"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="16_1sr6s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gout"]
