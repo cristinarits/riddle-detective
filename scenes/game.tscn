@@ -476,7 +476,7 @@ tile_set = SubResource("TileSet_lnu2h")
 [node name="doors" type="Node" parent="."]
 
 [node name="door_W" parent="doors" instance=ExtResource("9_0tnpc")]
-position = Vector2(-50, 376)
+position = Vector2(71, 374)
 door_tag = "G"
 destination_level_tag = "observatory"
 destination_door_tag = "O"
@@ -487,17 +487,35 @@ position = Vector2(1, -1)
 [node name="Spawn" parent="doors/door_W" index="1"]
 position = Vector2(1, -82)
 
-[node name="Door" parent="doors" instance=ExtResource("9_0tnpc")]
-position = Vector2(584, 0)
+[node name="Door_R" parent="doors" instance=ExtResource("9_0tnpc")]
+position = Vector2(-182, -338)
 door_tag = "R"
 destination_level_tag = "shore"
 destination_door_tag = "S"
 
-[node name="CollisionShape2D" parent="doors/Door" index="0"]
+[node name="CollisionShape2D" parent="doors/Door_R" index="0"]
 position = Vector2(1, 2)
 
-[node name="Spawn" parent="doors/Door" index="1"]
-position = Vector2(-89, 1)
+[node name="Spawn" parent="doors/Door_R" index="1"]
+position = Vector2(1, 74)
+
+[node name="Door_U" parent="doors" instance=ExtResource("9_0tnpc")]
+position = Vector2(592, 23)
+door_tag = "U"
+destination_level_tag = "loft"
+destination_door_tag = "L"
+
+[node name="Spawn" parent="doors/Door_U" index="1"]
+position = Vector2(-80, 0)
+
+[node name="Door_Ink" parent="doors" instance=ExtResource("9_0tnpc")]
+position = Vector2(594, -228)
+door_tag = "Ink"
+destination_level_tag = "underground_library"
+destination_door_tag = "ink"
+
+[node name="Spawn" parent="doors/Door_Ink" index="1"]
+position = Vector2(-79, 0)
 
 [node name="mira" parent="." instance=ExtResource("11_dinhu")]
 position = Vector2(173, -124)
@@ -508,5 +526,7 @@ position = Vector2(-14.2857, -52.1933)
 scale = Vector2(0.785, 1.055)
 
 [editable path="doors/door_W"]
-[editable path="doors/Door"]
+[editable path="doors/Door_R"]
+[editable path="doors/Door_U"]
+[editable path="doors/Door_Ink"]
 [editable path="mira"]

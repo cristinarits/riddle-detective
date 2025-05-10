@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://c4yt7ohpguas"]
+[gd_scene load_steps=47 format=4 uid="uid://c4yt7ohpguas"]
 
 [ext_resource type="PackedScene" uid="uid://h80qnpdbcgwm" path="res://inkteller.tscn" id="1_ebf3q"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_s7v22"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ye3df2rfh62" path="res://assets/tileset/black-background.png" id="13_o4w3v"]
 [ext_resource type="Texture2D" uid="uid://c8jq1wu6wwhhp" path="res://assets/tileset/stuff.png" id="14_bw3jd"]
 [ext_resource type="Texture2D" uid="uid://cqweqtsl4ukh8" path="res://assets/tileset/cobblestone-floor.png" id="15_urwip"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="18_u4dd8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyo7q"]
 texture = ExtResource("1_s7v22")
@@ -1766,7 +1767,18 @@ tile_map_data = PackedByteArray("AAAZABoAAAAIAEoAAAAdABYAAAAIAEoAACAYAAsAAAAIAEo
 tile_set = SubResource("TileSet_16a5h")
 
 [node name="player" parent="." instance=ExtResource("2_xbocd")]
-position = Vector2(590, 566)
+position = Vector2(587, 557)
 movement_speed = 300.0
 
+[node name="Door" parent="." instance=ExtResource("18_u4dd8")]
+position = Vector2(586, 651)
+door_tag = "ink"
+destination_level_tag = "game"
+destination_door_tag = "Ink"
+spawn_direction = "right"
+
+[node name="Spawn" parent="Door" index="1"]
+position = Vector2(1, -61)
+
 [editable path="TileMap/loft/inkteller"]
+[editable path="Door"]
