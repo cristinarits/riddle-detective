@@ -20,6 +20,8 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_shore
 
 	if scene_to_load != null:
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 		spawn_door_tag = destination_tag
 		call_deferred("_change_scene_deferred", scene_to_load)
 

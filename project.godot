@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 NavigationManager="*res://script/navigation_manager.gd"
 JournalManager="*res://journal_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+TransitionScreen="*res://scenes/transition_screen.tscn"
 
 [dialogic]
 

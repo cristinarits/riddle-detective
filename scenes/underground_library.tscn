@@ -1,6 +1,6 @@
 [gd_scene load_steps=46 format=4 uid="uid://c4yt7ohpguas"]
 
-[ext_resource type="PackedScene" uid="uid://h80qnpdbcgwm" path="res://inkteller.tscn" id="1_ebf3q"]
+[ext_resource type="PackedScene" path="res://inkteller.tscn" id="1_ebf3q"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_s7v22"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_u4dd8"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="2_xbocd"]
@@ -1750,6 +1750,10 @@ tile_set = SubResource("TileSet_16a5h")
 position = Vector2(590, 304)
 scale = Vector2(0.088, 0.05)
 
+[node name="AnimatedSprite2D" parent="TileMap/loft/inkteller" index="0"]
+position = Vector2(0, -40)
+scale = Vector2(0.8, 1.315)
+
 [node name="floor decor" type="TileMapLayer" parent="TileMap/loft"]
 use_parent_material = true
 position = Vector2(0, 3)
@@ -1763,3 +1767,6 @@ tile_set = SubResource("TileSet_16a5h")
 
 [node name="player" parent="." instance=ExtResource("2_xbocd")]
 position = Vector2(590, 566)
+movement_speed = 300.0
+
+[editable path="TileMap/loft/inkteller"]

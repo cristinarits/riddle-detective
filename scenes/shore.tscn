@@ -1703,8 +1703,8 @@ position = Vector2(907, 281)
 [node name="Door_shore" parent="Door" instance=ExtResource("9_w8k8i")]
 position = Vector2(530, 617)
 door_tag = "S"
-destination_level_tag = "observatorysl"
-destination_door_tag = "W"
+destination_level_tag = "game"
+destination_door_tag = "R"
 spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Door/Door_shore" index="0"]
@@ -1715,6 +1715,7 @@ position = Vector2(-1, -69)
 
 [node name="player" parent="." instance=ExtResource("10_yhopk")]
 position = Vector2(528, 503)
+movement_speed = 300.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

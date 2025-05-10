@@ -429,7 +429,7 @@ metadata/_edit_use_anchors_ = true
 z_index = 1
 position = Vector2(-140, 13)
 motion_mode = 1
-movement_speed = 200.0
+movement_speed = 300.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -476,25 +476,37 @@ tile_set = SubResource("TileSet_lnu2h")
 [node name="doors" type="Node" parent="."]
 
 [node name="door_W" parent="doors" instance=ExtResource("9_0tnpc")]
-position = Vector2(580, -7)
+position = Vector2(-50, 376)
 door_tag = "G"
 destination_level_tag = "observatory"
 destination_door_tag = "O"
-spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="doors/door_W" index="0"]
-position = Vector2(1, 2)
+position = Vector2(1, -1)
 
 [node name="Spawn" parent="doors/door_W" index="1"]
-position = Vector2(-91, 1)
+position = Vector2(1, -82)
+
+[node name="Door" parent="doors" instance=ExtResource("9_0tnpc")]
+position = Vector2(584, 0)
+door_tag = "R"
+destination_level_tag = "shore"
+destination_door_tag = "S"
+
+[node name="CollisionShape2D" parent="doors/Door" index="0"]
+position = Vector2(1, 2)
+
+[node name="Spawn" parent="doors/Door" index="1"]
+position = Vector2(-89, 1)
 
 [node name="mira" parent="." instance=ExtResource("11_dinhu")]
 position = Vector2(173, -124)
 scale = Vector2(0.07, 0.05)
 
 [node name="AnimatedSprite2D" parent="mira" index="0"]
-position = Vector2(-14.2857, 79.9999)
-scale = Vector2(0.997874, 1.21487)
+position = Vector2(-14.2857, -52.1933)
+scale = Vector2(0.785, 1.055)
 
 [editable path="doors/door_W"]
+[editable path="doors/Door"]
 [editable path="mira"]
