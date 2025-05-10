@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://bthalk1ua0no3"]
+[gd_scene load_steps=43 format=4 uid="uid://b25d5vtio27wc"]
 
 [ext_resource type="Script" uid="uid://cqiol85sgk0fn" path="res://scenes/observatory.gd" id="1_cnw2q"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_wcyhc"]
@@ -1682,6 +1682,7 @@ tile_set = SubResource("TileSet_ruf66")
 
 [node name="player" parent="." instance=ExtResource("11_m7377")]
 position = Vector2(81, 322)
+movement_speed = 300.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

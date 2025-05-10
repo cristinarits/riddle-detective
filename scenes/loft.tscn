@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://pnhp5nr7n0p7"]
+[gd_scene load_steps=44 format=4 uid="uid://pnhp5nr7n0p7"]
 
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_rcodm"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_pdhta"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ye3df2rfh62" path="res://assets/tileset/black-background.png" id="13_l6gn8"]
 [ext_resource type="Texture2D" uid="uid://c8jq1wu6wwhhp" path="res://assets/tileset/stuff.png" id="14_j7uvy"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="16_1sr6s"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="16_5plv4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7uvy"]
 texture = ExtResource("1_rcodm")
@@ -1747,4 +1748,17 @@ tile_map_data = PackedByteArray("AAAlABUAAAAKABQAAAAgABUAAAAMAA0AAAAmABQAAAAOAA0
 tile_set = SubResource("TileSet_ruf66")
 
 [node name="player" parent="." instance=ExtResource("16_1sr6s")]
-position = Vector2(568, 485)
+position = Vector2(580, 529)
+movement_speed = 300.0
+
+[node name="Door" parent="." instance=ExtResource("16_5plv4")]
+position = Vector2(580, 621)
+door_tag = "L"
+destination_level_tag = "game"
+destination_door_tag = "U"
+spawn_direction = "left"
+
+[node name="Spawn" parent="Door" index="1"]
+position = Vector2(0, -61)
+
+[editable path="Door"]
