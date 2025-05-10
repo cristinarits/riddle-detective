@@ -23,6 +23,13 @@ func _ready():
 	randomize()
 	start_pos = position
 
+	if Dialogic.has_signal("signal_event"):
+		Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(signal_name: String):
+	if signal_name == "inkteller_finished":
+		_on_dialogue_dialogue_finished()
+
 func _process(delta):
 	if current_state == IDLE or current_state == NEW_DIR:
 		$AnimatedSprite2D.play("idle")
@@ -47,7 +54,7 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("chat"):
 		Dialogic.start("inkteller")
- 
+
 func move(delta):
 	if !is_chatting:
 		position += dir * SPEED * delta
@@ -74,13 +81,15 @@ func _on_dialogue_dialogue_finished() -> void:
 func show_note_after_chat():
 	if note_title.is_empty() or note_content.is_empty():
 		return
-		
+
 	var note_scene = preload("res://UI/note_ui.tscn").instantiate()
-	note_scene.name = "CurrentNote" 
+	note_scene.name = "CurrentNote"
 	get_tree().root.add_child(note_scene)
-	
+
 	await get_tree().process_frame
 	note_scene.open(note_title, note_content)
-	
+
 	if add_to_journal and has_node("/root/JournalManager"):
 		JournalManager.add_note(note_title, note_content)
+
+	NavigationManager.town_fog_cleared = true

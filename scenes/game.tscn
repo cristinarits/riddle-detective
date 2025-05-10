@@ -17,6 +17,15 @@
 script/source = "extends Node2D
 
 func _ready():
+	print(\"FogCleared:\", NavigationManager.town_fog_cleared)
+
+	if NavigationManager.town_fog_cleared:
+		var fog_nodes = get_tree().get_nodes_in_group(\"fog\")
+		print(\"Found fog nodes:\", fog_nodes.size())
+		for fog in fog_nodes:
+			print(\"Removing:\", fog.name)
+			fog.queue_free()
+
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 
@@ -534,7 +543,7 @@ position = Vector2(-185, -298)
 [node name="CollisionShape2D" parent="Node/fog_block_R" index="0"]
 position = Vector2(0, -1)
 
-[node name="Fog" parent="Node/fog_block_R" index="1"]
+[node name="Fog" parent="Node/fog_block_R" index="1" groups=["fog"]]
 position = Vector2(7.62939e-06, 1)
 scale = Vector2(0.1625, 0.196529)
 
@@ -544,7 +553,7 @@ position = Vector2(-4, 282)
 [node name="CollisionShape2D" parent="Node/fog_block_G" index="0"]
 position = Vector2(76, 21)
 
-[node name="Fog" parent="Node/fog_block_G" index="1"]
+[node name="Fog" parent="Node/fog_block_G" index="1" groups=["fog"]]
 position = Vector2(76, 11)
 rotation = -3.14159
 
@@ -554,7 +563,7 @@ position = Vector2(494, -38)
 [node name="CollisionShape2D" parent="Node/fog_block_U" index="0"]
 position = Vector2(95, 51)
 
-[node name="Fog" parent="Node/fog_block_U" index="1"]
+[node name="Fog" parent="Node/fog_block_U" index="1" groups=["fog"]]
 position = Vector2(76.5, 51.3796)
 rotation = 1.5708
 scale = Vector2(0.12421, 0.212946)

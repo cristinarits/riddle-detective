@@ -53,7 +53,7 @@ var last_direction: Vector2 = Vector2.DOWN
 
 
 func _process(_delta):
-	if Input.is_action_just_pressed(\"name\"):
+	if Input.is_action_just_pressed(\"journal\"):
 		Dialogic.start(\"end\")
 
 

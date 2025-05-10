@@ -9,6 +9,7 @@ const scene_underground = preload("res://scenes/underground_library.tscn")
 signal on_trigger_player_spawn
 
 var spawn_door_tag
+var town_fog_cleared := false
 
 func go_to_level(level_tag, destination_tag):
 	var scene_to_load
