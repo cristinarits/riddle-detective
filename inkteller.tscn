@@ -1,13 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3v2mcaultquo"]
+[gd_scene load_steps=6 format=3 uid="uid://h80qnpdbcgwm"]
 
-[ext_resource type="Script" uid="uid://bcmjdjbws3s76" path="res://mira.gd" id="1_xxcha"]
-[ext_resource type="Texture2D" uid="uid://d33wmluow44yt" path="res://characters/mira.png" id="2_6226f"]
+[ext_resource type="Script" uid="uid://70addojk42s" path="res://inkteller.gd" id="1_islum"]
+[ext_resource type="Texture2D" uid="uid://vaqj76868akv" path="res://characters/inkteller.png" id="2_islum"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bc6q4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_6226f")
+"texture": ExtResource("2_islum")
 }],
 "loop": true,
 "name": &"idle",
@@ -22,9 +22,9 @@ height = 300.0
 radius = 900.0
 height = 3828.0
 
-[node name="mira" type="CharacterBody2D"]
+[node name="npc" type="CharacterBody2D"]
 scale = Vector2(0.05, 0.02)
-script = ExtResource("1_xxcha")
+script = ExtResource("1_islum")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bc6q4")
