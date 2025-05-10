@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://bthalk1ua0no3"]
+[gd_scene load_steps=42 format=4 uid="uid://bthalk1ua0no3"]
 
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_wcyhc"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_c6080"]
@@ -8,10 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bp1l556ywjjal" path="res://assets/tileset/water.png" id="5_aolng"]
 [ext_resource type="Texture2D" uid="uid://buplj38oofupe" path="res://assets/tileset/waves.png" id="6_4d1gk"]
 [ext_resource type="Texture2D" uid="uid://qw83hhkugkek" path="res://assets/tileset/pebbles (2).png" id="7_ngw4d"]
-[ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="8_w0wix"]
 [ext_resource type="Texture2D" uid="uid://cvvj2s1vxg0ev" path="res://assets/tileset/carpet.png" id="8_wsfe2"]
 [ext_resource type="Texture2D" uid="uid://b5d8fqmyeptj5" path="res://assets/tileset/window.png" id="9_k5nwl"]
-[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="9_qxb1g"]
 [ext_resource type="Texture2D" uid="uid://dhaa7yg8jwcgf" path="res://assets/tileset/bookshelf.png" id="10_k5nwl"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="10_naw1k"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="11_m7377"]
@@ -1678,12 +1676,6 @@ tile_set = SubResource("TileSet_ruf66")
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAcABYAAAAKAFIAAAAeABYAAAAKABQAABAoABYAAAAKABQAAAAqABYAAAAKABQAAAANACMAAAAOAA0AAAAUACQAAAAOAA0AAAA1ACQAAAAKABQAAAA8ACMAAAAMAA0AAAAgABcAAAAAACYAAAAjABUACgAAAAAAAAAmABcACwAAAAAAAABDACQACwAAAAAAAGA=")
 tile_set = SubResource("TileSet_ruf66")
-
-[node name="letter_bottle" parent="." instance=ExtResource("8_w0wix")]
-position = Vector2(907, 376)
-
-[node name="SeaGlass" parent="." instance=ExtResource("9_qxb1g")]
-position = Vector2(75, 376)
 
 [node name="Door" type="Node" parent="."]
 
