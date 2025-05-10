@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cvvj2s1vxg0ev" path="res://assets/tileset/carpet.png" id="8_wsfe2"]
 [ext_resource type="Texture2D" uid="uid://b5d8fqmyeptj5" path="res://assets/tileset/window.png" id="9_k5nwl"]
 [ext_resource type="Texture2D" uid="uid://dhaa7yg8jwcgf" path="res://assets/tileset/bookshelf.png" id="10_k5nwl"]
-[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="10_naw1k"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="10_naw1k"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="11_m7377"]
 [ext_resource type="Texture2D" uid="uid://d1vc3j2ydw617" path="res://assets/tileset/parchment.png" id="12_4d1gk"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="17_w0wix"]

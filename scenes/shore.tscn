@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=4 uid="uid://v64h4oyrc30e"]
+[gd_scene load_steps=31 format=4 uid="uid://v64h4oyrc30e"]
 
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="1_tuc82"]
+[ext_resource type="Script" uid="uid://c58t5x1b5rni0" path="res://scenes/shore.gd" id="1_x2efu"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_a81o0"]
 [ext_resource type="Texture2D" uid="uid://bp1l556ywjjal" path="res://assets/tileset/water.png" id="3_w8k8i"]
 [ext_resource type="Texture2D" uid="uid://buplj38oofupe" path="res://assets/tileset/waves.png" id="4_yhopk"]
@@ -9,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qw83hhkugkek" path="res://assets/tileset/pebbles (2).png" id="7_12c14"]
 [ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="7_oah6v"]
 [ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interation_components/sea_glass.tscn" id="8_a81o0"]
-[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="9_w8k8i"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="9_w8k8i"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="10_yhopk"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="12_5evtj"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="12_oah6v"]
@@ -1655,6 +1656,7 @@ sources/6 = SubResource("TileSetAtlasSource_br6k8")
 sources/3 = SubResource("TileSetAtlasSource_iimt2")
 
 [node name="shore" type="Node2D"]
+script = ExtResource("1_x2efu")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_0718o")

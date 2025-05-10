@@ -1,28 +1,40 @@
-[gd_scene load_steps=20 format=4 uid="uid://yb6rlsmpgr2q"]
+[gd_scene load_steps=19 format=4 uid="uid://yb6rlsmpgr2q"]
 
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://bp1l556ywjjal" path="res://assets/tileset/water.png" id="4_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://buplj38oofupe" path="res://assets/tileset/waves.png" id="5_gee14"]
-[ext_resource type="PackedScene" uid="uid://b3v2mcaultquo" path="res://mira.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://bhshnwragmdnq" path="res://assets/tileset/rock1.png" id="6_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="7_vtaks"]
-[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://scenes/door.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="9_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="11_kvpfn"]
 
 [sub_resource type="GDScript" id="GDScript_vtaks"]
 script/source = "extends Node2D
 
-func _read():
+func _ready():
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
-		
 
 func _on_level_spawn(destination_tag: String):
-	var door_path = \"script/door_\" + destination_tag
-	var door = get_node(door_path) as Door
+	var doors = get_tree().get_nodes_in_group(\"doors\")
+	var target_door = null
+	
+	for door in doors:
+		if door.door_tag == destination_tag: # fixed this line!
+			target_door = door
+			break
+	
+	if target_door:
+		var player = get_node(\"player\") # ensure path is correct
+		player.global_position = target_door.spawn.global_position
+		NavigationManager.spawn_door_tag = null
+	else:
+		print(\"Door with CURRENT SCENE tag '%s' not found!\" % destination_tag)
+		for door in doors:
+			print(\"Available door_tag: \", door.door_tag) # debugging helper
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
@@ -469,9 +481,5 @@ spawn_direction = "down"
 
 [node name="Spawn" parent="doors/door_W" index="1"]
 position = Vector2(-45, 0)
-
-[node name="mira" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(176, -129)
-scale = Vector2(0.058, 0.048)
 
 [editable path="doors/door_W"]
