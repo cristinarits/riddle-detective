@@ -11,7 +11,6 @@ func _ready():
 	close_button.pressed.connect(_on_close_button_pressed)
 	set_process_unhandled_key_input(true)
 	
-	# Включаем обработку ввода для панели
 	panel.gui_input.connect(_on_panel_gui_input)
 
 func open(title: String, content: String):
