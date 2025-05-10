@@ -17,7 +17,7 @@
 &"portraits": {
 "Mira": {
 "export_overrides": {
-"image": "\"res://characters/vnm_inkteller_idle.png\""
+"image": "\"res://characters/vnm_mira.png\""
 },
 "ignore_char_scale": false,
 "mirror": false,
