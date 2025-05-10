@@ -13,6 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="11_kvpfn"]
 
 [sub_resource type="GDScript" id="GDScript_vtaks"]
+script/source = "extends Node2D
+
+func _read():
+	if NavigationManager.spawn_door_tag != null:
+		_on_level_spawn(NavigationManager.spawn_door_tag)
+		
+
+func _on_level_spawn(destination_tag: String):
+	var door_path = \"script/door_\" + destination_tag
+	var door = get_node(door_path) as Door
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]
 texture = ExtResource("2_yqjtg")

@@ -1,15 +1,11 @@
-extends Node
+extends Node2D
 
-func _ready():
-	var door_list = get_tree().get_nodes_in_group("doors")
-	var player = get_tree().get_first_node_in_group("player")
+func _read():
+	if NavigationManager.spawn_door_tag != null:
+		_on_level_spawn(NavigationManager.spawn_door_tag)
+		
 
-	if player == null:
-		print("❌ Player not found!")
-		return
-
-	for door in door_list:
-		if door.destination_door_tag == NavigationManager.spawn_door_tag:
-			player.global_position = door.spawn.global_position
-			print("✅ Spawned player at door:", door.destination_door_tag)
-			break
+func _on_level_spawn(destination_tag: String):
+	var door_path = "script/door_" + destination_tag
+	var door = get_node(door_path) as Door
+	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
