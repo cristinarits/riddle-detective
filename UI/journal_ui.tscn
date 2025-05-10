@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b162v2esfhtb2"]
+
+[ext_resource type="Script" uid="uid://cev6xskx4g4sc" path="res://UI/journal_ui.gd" id="1_a3ory"]
+
+[node name="JournalUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a3ory")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 231.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 226.0
+offset_bottom = 233.0
+
+[node name="Header" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="NotesContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/NotesContainer"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "close"
