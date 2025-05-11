@@ -7,8 +7,6 @@ extends Control
 func _ready():
 	visible = false
 	update_journal()
-	
-	notes_list.item_selected.connect(_on_note_selected)
 	$Panel/VBoxContainer/CloseButton.pressed.connect(hide)
 
 func update_journal():
@@ -17,11 +15,15 @@ func update_journal():
 	
 	if notes.is_empty():
 		title_label.text = "Journal is empty"
-		content_label.text = "Interact with characters to gather information"
+		content_label.text = "Talk to characters to gather clues"
 		return
 	
-	for note in notes:
-		notes_list.add_item(note["title"])
+	for i in range(notes.size()):
+		notes_list.add_item(notes[i]["title"])
+	
+	if notes_list.item_count > 0:
+		notes_list.select(0)
+		_on_note_selected(0)
 
 func _on_note_selected(index: int):
 	var note = JournalManager.get_notes()[index]
@@ -32,9 +34,6 @@ func open():
 	update_journal()
 	visible = true
 	notes_list.grab_focus()
-	if notes_list.item_count > 0:
-		notes_list.select(0)
-		_on_note_selected(0)
 
 func _unhandled_input(event):
 	if event.is_action_pressed("journal"):
