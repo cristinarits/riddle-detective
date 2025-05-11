@@ -46,7 +46,6 @@ func _on_level_spawn(destination_tag: String):
 		print(\"Door with CURRENT SCENE tag '%s' not found!\" % destination_tag)
 		for door in doors:
 			print(\"Available door_tag: \", door.door_tag)
-			
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtaks"]

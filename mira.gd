@@ -96,6 +96,3 @@ func show_note_after_chat():
 	
 	if add_to_journal and has_node("/root/JournalManager"):
 		JournalManager.add_note(note_title, note_content)
-
-	print("Note shown. Title: ", note_title)
-	print("Note content: ", note_content)

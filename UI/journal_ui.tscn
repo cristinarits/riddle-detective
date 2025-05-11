@@ -1,46 +1,21 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=2 format=3 uid="uid://b162v2esfhtb2"]
+[gd_scene load_steps=2 format=3 uid="uid://bq57454fw6teq"]
 
-[ext_resource type="Script" uid="uid://cev6xskx4g4sc" path="res://UI/journal_ui.gd" id="1_a3ory"]
-=======
-[gd_scene load_steps=2 format=3 uid="uid://jni0tudm33h7"]
+[ext_resource type="Script" uid="uid://bdi7ht4yym10p" path="res://UI/journal_ui.gd" id="1_a3ory"]
 
-[ext_resource type="Script" uid="uid://biu2wj2afynml" path="res://UI/journal_ui.gd" id="1_a3ory"]
->>>>>>> Stashed changes
-
-[node name="JournalUI" type="Control"]
+[node name="JournalUi" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_a3ory")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-<<<<<<< Updated upstream
-offset_right = 226.0
-offset_bottom = 231.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 226.0
-offset_bottom = 233.0
-
-[node name="Header" type="Label" parent="Panel/VBoxContainer"]
-layout_mode = 2
-
-[node name="NotesContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/NotesContainer"]
-=======
-offset_right = 237.0
-offset_bottom = 233.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 0
-offset_right = 235.0
-offset_bottom = 232.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -55,17 +30,14 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ContentLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer/NoteContent"]
->>>>>>> Stashed changes
 layout_mode = 2
 
-[node name="CloseButton" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-<<<<<<< Updated upstream
-text = "close"
-=======
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="CloseButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_right = 238.0
-offset_bottom = 232.0
->>>>>>> Stashed changes
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
