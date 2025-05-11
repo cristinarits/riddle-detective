@@ -1,38 +1,37 @@
 extends Node
 
-var all_notes = []
+var notes = []
 
 func add_note(title: String, content: String):
-	if not is_note_exists(title, content):
-		var new_note = {
-			"title": title,
-			"content": content,
-			"timestamp": Time.get_datetime_string_from_system()
-		}
-		all_notes.append(new_note)
-		save_notes()
+	for note in notes:
+		if note["title"] == title and note["content"] == content:
+			return
+	
+	var new_note = {
+		"title": title,
+		"content": content,
+		"time": Time.get_datetime_string_from_system()
+	}
+	notes.append(new_note)
+	save_notes()
+	print("Note added: ", title) 
 
 func get_notes():
-	return all_notes.duplicate()
-
-func is_note_exists(title: String, content: String) -> bool:
-	for note in all_notes:
-		if note["title"] == title and note["content"] == content:
-			return true
-	return false
-
-func clear_notes():
-	all_notes.clear()
-	save_notes()
+	return notes.duplicate()
 
 func save_notes():
-	var save_file = FileAccess.open("user://journal.save", FileAccess.WRITE)
-	save_file.store_var(all_notes)
+	var file = FileAccess.open("user://journal.dat", FileAccess.WRITE)
+	if file:
+		file.store_var(notes)
+	else:
+		push_error("Failed to save journal")
 
 func load_notes():
-	if FileAccess.file_exists("user://journal.save"):
-		var save_file = FileAccess.open("user://journal.save", FileAccess.READ)
-		all_notes = save_file.get_var()
+	if FileAccess.file_exists("user://journal.dat"):
+		var file = FileAccess.open("user://journal.dat", FileAccess.READ)
+		if file:
+			notes = file.get_var()
+			print("Loaded ", notes.size(), " notes")
 
 func _ready():
 	load_notes()
