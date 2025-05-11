@@ -11,5 +11,7 @@ Inkteller: Said it was becoming dangerous.
 Inkteller: It might open only if you remember the name that feels yours and speak it to the binding...
 Inkteller: Or if you remember another way you may have opened it that I do not know of.
 Lia: I don’t know it.
-Inkteller: Then find out. Return to the three places you loved\: The Astrarium you rebuilt, The Seaglass Shore, The Clockmaker’s Loft
+Inkteller: Then find out your name. Return to the three places you loved\: The Astrarium you rebuilt, The Seaglass Shore, The Clockmaker’s Loft.
+Inkteller: You could find your answers from there.
+Lia: (Press J to open the journal)
 [signal arg="inkteller_finished"]
