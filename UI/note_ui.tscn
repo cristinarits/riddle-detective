@@ -9,8 +9,8 @@ font_color = Color(0, 0, 0, 1)
 [node name="NoteUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 222.0
+offset_bottom = 167.0
 script = ExtResource("1_ngchy")
 
 [node name="Panel" type="Panel" parent="."]
