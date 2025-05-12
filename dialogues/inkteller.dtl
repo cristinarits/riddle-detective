@@ -13,5 +13,5 @@ Inkteller: Or if you remember another way you may have opened it that I do not k
 Lia: I don’t know it.
 Inkteller: Then find out your name. Return to the three places you loved\: The Astrarium you rebuilt, The Seaglass Shore, The Clockmaker’s Loft.
 Inkteller: You could find your answers from there.
-Lia: (Press J to open the journal)
+Lia: (Press TAB to open the journal)
 [signal arg="inkteller_finished"]

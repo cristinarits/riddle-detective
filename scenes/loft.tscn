@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://pnhp5nr7n0p7"]
+[gd_scene load_steps=45 format=4 uid="uid://pnhp5nr7n0p7"]
 
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_rcodm"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_pdhta"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c8jq1wu6wwhhp" path="res://assets/tileset/stuff.png" id="14_j7uvy"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="16_1sr6s"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="16_5plv4"]
+[ext_resource type="PackedScene" uid="uid://cpjs8l2sn17wb" path="res://pickableItems/owl.tscn" id="17_f7pe8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7uvy"]
 texture = ExtResource("1_rcodm")
@@ -1761,4 +1762,11 @@ spawn_direction = "left"
 [node name="Spawn" parent="Door" index="1"]
 position = Vector2(0, -61)
 
+[node name="owl" parent="." instance=ExtResource("17_f7pe8")]
+position = Vector2(525, 380)
+
+[node name="CollisionShape2D" parent="owl" index="0"]
+position = Vector2(-2, 13)
+
 [editable path="Door"]
+[editable path="owl"]
