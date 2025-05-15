@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://b25d5vtio27wc"]
+[gd_scene load_steps=44 format=4 uid="uid://b25d5vtio27wc"]
 
 [ext_resource type="Script" uid="uid://cqiol85sgk0fn" path="res://scenes/observatory.gd" id="1_cnw2q"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_wcyhc"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d1vc3j2ydw617" path="res://assets/tileset/parchment.png" id="12_4d1gk"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="17_w0wix"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="18_qxb1g"]
+[ext_resource type="PackedScene" uid="uid://dgsl1nufaotrs" path="res://pickableItems/telescope.tscn" id="18_so3cg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrscy"]
 texture = ExtResource("1_wcyhc")
@@ -1720,4 +1721,8 @@ position = Vector2(592, 296)
 [node name="Spawn" parent="Door_O" index="1"]
 position = Vector2(585, 215)
 
+[node name="Telescope" parent="." instance=ExtResource("18_so3cg")]
+position = Vector2(574, 305)
+
 [editable path="Door_O"]
+[editable path="Telescope"]

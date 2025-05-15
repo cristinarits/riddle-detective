@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgsl1nufaotrs"]
+
+[ext_resource type="Script" uid="uid://bfjx7mdcpqic8" path="res://telescope.gd" id="1_6egdl"]
+[ext_resource type="Texture2D" uid="uid://coomoajxoc0nh" path="res://assets/items/telescope.png" id="2_48wle"]
+[ext_resource type="Resource" uid="uid://cty0kekvms6fg" path="res://pickableItems/telescope.tres" id="2_q7fmp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q7fmp"]
+radius = 49.0
+height = 180.0
+
+[node name="Telescope" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_6egdl")
+item = ExtResource("2_q7fmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("CapsuleShape2D_q7fmp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_48wle")

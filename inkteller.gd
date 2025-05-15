@@ -15,8 +15,8 @@ var start_pos
 var is_roaming = true
 var is_chatting = false
 
-@export var note_title := "New note"
-@export_multiline var note_content := "New clue and information"
+@export var note_title := "New clue"
+@export_multiline var note_content := "???"
 @export var add_to_journal := true
 
 func _ready():

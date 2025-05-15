@@ -9,8 +9,8 @@ font_color = Color(0, 0, 0, 1)
 [node name="NoteUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 222.0
+offset_bottom = 167.0
 script = ExtResource("1_ngchy")
 
 [node name="Panel" type="Panel" parent="."]
@@ -38,6 +38,7 @@ offset_bottom = 38.0
 label_settings = SubResource("LabelSettings_equkj")
 
 [node name="ContentLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
 offset_top = 45.0
 offset_right = 214.0
 offset_bottom = 153.0
