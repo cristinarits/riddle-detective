@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpjs8l2sn17wb"]
 
-[ext_resource type="Script" uid="uid://cbyq5ott5yd10" path="res://owl.gd" id="1_rwojp"]
-[ext_resource type="Resource" uid="uid://wa3s0dqtss54" path="res://pickableItems/owl.tres" id="2_iq5jw"]
+[ext_resource type="Script" uid="uid://cbyq5ott5yd10" path="res://pickableItems/owl.gd" id="1_rwojp"]
+[ext_resource type="Resource" uid="uid://wa3s0dqtss54" path="res://pickableItems/items/owl.tres" id="2_iq5jw"]
 [ext_resource type="Texture2D" uid="uid://cec8p446pk6qu" path="res://assets/items/owl.png" id="3_22s1d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uqv2e"]
