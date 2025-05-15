@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_junan")
-name = ""
+name = "Flat Stone"
+text = "Rel was here. She sang to the tide."
 texture = ExtResource("2_i4lss")
 metadata/_custom_type_script = "uid://h2nfechsqp48"
