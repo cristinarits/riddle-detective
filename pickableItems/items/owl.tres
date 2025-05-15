@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://cm3k2ym6ogkvt"]
 
-[ext_resource type="Script" uid="uid://h2nfechsqp48" path="res://inventory/inventory_item.gd" id="1_junan"]
-[ext_resource type="Texture2D" uid="uid://cec8p446pk6qu" path="res://assets/items/owl.png" id="2_i4lss"]
+[ext_resource type="Script" uid="uid://h2nfechsqp48" path="res://inventory/inventory_item.gd" id="1_4nflj"]
+[ext_resource type="Texture2D" uid="uid://cec8p446pk6qu" path="res://assets/items/owl.png" id="2_7mhk6"]
 
 [resource]
-script = ExtResource("1_junan")
+script = ExtResource("1_4nflj")
 name = "Owl"
 text = "To Thorne, who fixed what no one else could."
-texture = ExtResource("2_i4lss")
+texture = ExtResource("2_7mhk6")
 metadata/_custom_type_script = "uid://h2nfechsqp48"

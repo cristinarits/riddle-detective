@@ -32,11 +32,12 @@ z_index = 2
 scale = Vector2(0.1, 0.1)
 
 [node name="DetailsPanel" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
-offset_top = -52.0
-offset_right = 100.0
-offset_bottom = -2.0
+offset_left = -159.0
+offset_top = -204.0
+offset_right = 28.0
+offset_bottom = -133.0
+scale = Vector2(2, 2)
 color = Color(0.168627, 0.101961, 0.101961, 1)
 
 [node name="ItemName" type="Label" parent="DetailsPanel"]
@@ -57,14 +58,15 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 5.0
-offset_top = -10.0
-offset_right = 205.0
-offset_bottom = 59.0
+offset_top = -14.5
+offset_right = 396.0
+offset_bottom = 84.5
 grow_vertical = 2
 scale = Vector2(0.45, 0.45)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_jagxy")
 text = "Text"
+autowrap_mode = 2
 
 [node name="ItemButton" type="Button" parent="."]
 layout_mode = 1
