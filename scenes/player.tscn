@@ -55,6 +55,7 @@ var last_direction: Vector2 = Vector2.DOWN
 var notebook_instance
 
 func _ready():
+	Global.set_player_refernce(self)
 	var notebook = preload(\"res://UI/notebook.tscn\")
 	notebook_instance = notebook.instantiate()
 	get_tree().root.add_child(notebook_instance)

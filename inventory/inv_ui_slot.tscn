@@ -24,3 +24,8 @@ layout_mode = 2
 
 [node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
 scale = Vector2(0.1, 0.1)
+
+[node name="DetailsPanel" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 130.0
