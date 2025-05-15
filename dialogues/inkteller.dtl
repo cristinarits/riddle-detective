@@ -4,8 +4,8 @@ Inkteller: Ah. Thistle. I wondered when you’d crawl back.
 Lia: Thistle? I… I need answers.
 join journal center
 Inkteller pulls out a locked journal
-leave journal
 Inkteller: This is yours.
+leave journal
 Inkteller: You forced me to hide it from you.
 Inkteller: Said it was becoming dangerous.
 Inkteller: It might open only if you remember the name that feels yours and speak it to the binding...
@@ -13,5 +13,5 @@ Inkteller: Or if you remember another way you may have opened it that I do not k
 Lia: I don’t know it.
 Inkteller: Then find out your name. Return to the three places you loved\: The Astrarium you rebuilt, The Seaglass Shore, The Clockmaker’s Loft.
 Inkteller: You could find your answers from there.
-Lia: (Press TAB to open the journal)
+Lia: (Press J to open the journal)
 [signal arg="inkteller_finished"]

@@ -1766,7 +1766,10 @@ position = Vector2(0, -61)
 position = Vector2(525, 380)
 
 [node name="CollisionShape2D" parent="owl" index="0"]
-position = Vector2(-2, 13)
+position = Vector2(35, -62)
+
+[node name="Sprite2D" parent="owl" index="1"]
+position = Vector2(37, -59)
 
 [editable path="Door"]
 [editable path="owl"]
