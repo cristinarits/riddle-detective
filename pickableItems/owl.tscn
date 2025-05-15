@@ -1,21 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpjs8l2sn17wb"]
+[gd_scene load_steps=5 format=3 uid="uid://btp46pfjwovap"]
 
-[ext_resource type="Script" uid="uid://cbyq5ott5yd10" path="res://pickableItems/owl.gd" id="1_rwojp"]
-[ext_resource type="Resource" uid="uid://wa3s0dqtss54" path="res://pickableItems/items/owl.tres" id="2_iq5jw"]
+[ext_resource type="Script" uid="uid://dts1b68klo1bb" path="res://pickableItems/owl.gd" id="1_rwojp"]
+[ext_resource type="Resource" uid="uid://btyeec15m665w" path="res://pickableItems/items/letter_bottle.tres" id="2_rwojp"]
 [ext_resource type="Texture2D" uid="uid://cec8p446pk6qu" path="res://assets/items/owl.png" id="3_22s1d"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uqv2e"]
-radius = 49.0918
+[sub_resource type="CircleShape2D" id="CircleShape2D_rqudg"]
+radius = 44.1022
 
-[node name="owl" type="Area2D"]
-collision_layer = 2
-collision_mask = 0
+[node name="Owl" type="Area2D"]
 script = ExtResource("1_rwojp")
-item = ExtResource("2_iq5jw")
+item = ExtResource("2_rwojp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_uqv2e")
+shape = SubResource("CircleShape2D_rqudg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("3_22s1d")

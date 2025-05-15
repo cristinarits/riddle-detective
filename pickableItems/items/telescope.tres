@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_2rawj")
-name = "telescope"
+name = "Telescope"
+text = "Aurelia’s Crown — charted by hand, by the one who would not forget the stars."
 texture = ExtResource("2_w55aj")
 metadata/_custom_type_script = "uid://h2nfechsqp48"

@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_kshef")
-name = "sea glass"
+name = "Sea Glass"
+text = "Sea-glass scratched with a compass rose"
 texture = ExtResource("2_5odq0")
 metadata/_custom_type_script = "uid://h2nfechsqp48"
