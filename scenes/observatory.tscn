@@ -1712,13 +1712,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -148.5
-offset_top = -48.0
-offset_right = 148.5
-offset_bottom = 0.0
+offset_left = -209.0
+offset_top = -80.0
+offset_right = 210.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="BurntParchment" parent="." instance=ExtResource("18_so3cg")]
 position = Vector2(299, 561)
