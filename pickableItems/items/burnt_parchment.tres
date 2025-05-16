@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dndvbwxjetjmx"]
+
+[ext_resource type="Script" uid="uid://h2nfechsqp48" path="res://inventory/inventory_item.gd" id="1_awku5"]
+[ext_resource type="Texture2D" uid="uid://dubxcflah3wql" path="res://assets/items/burnt_parchment.png" id="2_fs8du"]
+
+[resource]
+script = ExtResource("1_awku5")
+name = "Burnt Parchment"
+text = "To see like her, I named the stars in her honor… Aurelia, always looking up."
+texture = ExtResource("2_fs8du")
+metadata/_custom_type_script = "uid://h2nfechsqp48"

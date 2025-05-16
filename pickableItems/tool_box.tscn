@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dst6q03cn4d5e"]
+
+[ext_resource type="Script" uid="uid://nestyaa28171" path="res://pickableItems/tool_box.gd" id="1_13jl6"]
+[ext_resource type="Resource" uid="uid://bjqrgk6o23qiy" path="res://pickableItems/items/tol_box.tres" id="2_fwnm5"]
+[ext_resource type="Texture2D" uid="uid://433gk7ddao18" path="res://assets/items/toolbox.png" id="3_asbru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qxau3"]
+radius = 26.0192
+
+[node name="ToolBox" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_13jl6")
+item = ExtResource("2_fwnm5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qxau3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999969, 1.52588e-05)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("3_asbru")

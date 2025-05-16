@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://bthalk1ua0no3"]
+[gd_scene load_steps=44 format=4 uid="uid://bthalk1ua0no3"]
 
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_wcyhc"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_c6080"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d1xqhb7so10p2" path="res://pickableItems/telescope.tscn" id="17_ngw4d"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="17_w0wix"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="18_qxb1g"]
+[ext_resource type="PackedScene" uid="uid://bx53jfog7w1iw" path="res://pickableItems/burnt_parchment.tscn" id="18_so3cg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrscy"]
 texture = ExtResource("1_wcyhc")
@@ -1719,15 +1720,10 @@ grow_horizontal = 2
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
+[node name="BurntParchment" parent="." instance=ExtResource("18_so3cg")]
+position = Vector2(299, 561)
+
 [node name="Telescope" parent="." instance=ExtResource("17_ngw4d")]
-position = Vector2(574, 305)
-script = null
-
-[node name="CollisionShape2D" parent="Telescope" index="0"]
-position = Vector2(0, 58)
-
-[node name="Sprite2D" parent="Telescope" index="1"]
-position = Vector2(0, 32)
+position = Vector2(569, 349)
 
 [editable path="Door/Door_shore"]
-[editable path="Telescope"]

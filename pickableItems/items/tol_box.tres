@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bjqrgk6o23qiy"]
+
+[ext_resource type="Script" uid="uid://h2nfechsqp48" path="res://inventory/inventory_item.gd" id="1_vs42j"]
+[ext_resource type="Texture2D" uid="uid://433gk7ddao18" path="res://assets/items/toolbox.png" id="2_rbbmd"]
+
+[resource]
+script = ExtResource("1_vs42j")
+name = "Tool Box"
+text = "A. Thorne"
+texture = ExtResource("2_rbbmd")
+metadata/_custom_type_script = "uid://h2nfechsqp48"

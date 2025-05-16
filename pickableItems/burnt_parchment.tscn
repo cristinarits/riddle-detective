@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx53jfog7w1iw"]
+
+[ext_resource type="Script" uid="uid://dgsrgyl20ajay" path="res://burnt_parchment.gd" id="1_4ym8t"]
+[ext_resource type="Texture2D" uid="uid://dubxcflah3wql" path="res://assets/items/burnt_parchment.png" id="2_aspxq"]
+[ext_resource type="Resource" uid="uid://dndvbwxjetjmx" path="res://pickableItems/items/burnt_parchment.tres" id="2_ins1b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ins1b"]
+radius = 55.0
+
+[node name="BurntParchment" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_4ym8t")
+item = ExtResource("2_ins1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ins1b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_aspxq")
