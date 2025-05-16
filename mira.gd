@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 30
 
+signal chatted_with_player
+
 enum {
 	IDLE,
 	NEW_DIR,
@@ -68,6 +70,7 @@ func start_chat():
 	is_roaming = false
 	is_chatting = true
 	$AnimatedSprite2D.play("idle")
+	emit_signal("chatted_with_player")
 
 func _on_dialogic_timeline_ended():
 	is_chatting = false
@@ -84,9 +87,7 @@ func show_note_after_chat():
 		
 	var note_scene = preload("res://UI/note_ui.tscn").instantiate()
 	note_scene.name = "CurrentNote"
-	
 	get_tree().root.add_child(note_scene)
-	
 	await get_tree().process_frame
 	
 	if note_scene.has_method("open"):

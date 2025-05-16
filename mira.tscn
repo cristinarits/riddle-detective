@@ -22,7 +22,7 @@ height = 1000.0
 radius = 900.0
 height = 3828.0
 
-[node name="mira" type="CharacterBody2D"]
+[node name="mira" type="CharacterBody2D" groups=["mira"]]
 scale = Vector2(0.05, 0.02)
 script = ExtResource("1_xxcha")
 

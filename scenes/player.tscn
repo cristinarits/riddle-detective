@@ -336,6 +336,8 @@ height = 36.0
 script = SubResource("GDScript_g2els")
 inv = ExtResource("1_j2b1d")
 
+[node name="InteractingComponent" parent="." instance=ExtResource("38_t4otl")]
+
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(0.05, 0.05)
@@ -348,5 +350,3 @@ speed_scale = 2.0
 position = Vector2(0, 23)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_j2b1d")
-
-[node name="InteractingComponent" parent="." instance=ExtResource("38_t4otl")]
