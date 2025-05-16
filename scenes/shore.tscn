@@ -1684,12 +1684,6 @@ visible = false
 use_parent_material = true
 tile_set = SubResource("TileSet_ruf66")
 
-[node name="walls" type="TileMapLayer" parent="TileMap/shore"]
-use_parent_material = true
-position = Vector2(-20, 3)
-tile_map_data = PackedByteArray("AAABACQAAAAIABwAAAAIACMAAAAIABwAAAANACYAAAAIABwAAAASACIAAAAIABwAAAA2ACMAAAAIABwAAAA7ACUAAAAIABwAAABBACcAAAAIABwAAABEACQAAAAIABwAAAD8/yIAAAAIABwAAAAbACUAAAAIABwAAAAYACIAAAAIABwAAAAoACQAAAAIABwAAABDABQABgAAAAAAABABABIABgAAAAAAAAAvACIAAAAIABwAAAA=")
-tile_set = SubResource("TileSet_ruf66")
-
 [node name="floor decor" type="TileMapLayer" parent="TileMap/shore"]
 use_parent_material = true
 position = Vector2(0, 3)
@@ -1713,6 +1707,12 @@ position = Vector2(-1, 28)
 
 [node name="Spawn" parent="Door/Door_shore" index="1"]
 position = Vector2(-1, -69)
+
+[node name="walls" type="TileMapLayer" parent="Door"]
+use_parent_material = true
+position = Vector2(-20, 0)
+tile_map_data = PackedByteArray("AAABACQAAAAIABwAAAAIACMAAAAIABwAAAANACYAAAAIABwAAAASACIAAAAIABwAAAA2ACMAAAAIABwAAAA7ACUAAAAIABwAAABBACcAAAAIABwAAABEACQAAAAIABwAAAD8/yIAAAAIABwAAAAbACUAAAAIABwAAAAYACIAAAAIABwAAAAoACQAAAAIABwAAABDABQABgAAAAAAABABABIABgAAAAAAAAAvACIAAAAIABwAAAA=")
+tile_set = SubResource("TileSet_ruf66")
 
 [node name="player" parent="." instance=ExtResource("10_yhopk")]
 position = Vector2(528, 503)
@@ -1739,11 +1739,10 @@ offset_top = -1.0
 offset_right = 973.0
 offset_bottom = 39.0
 
-[node name="SeaGlass" parent="." instance=ExtResource("8_a81o0")]
-position = Vector2(93, 335)
-item = null
-
 [node name="Area2D" parent="." instance=ExtResource("15_cv2hm")]
 position = Vector2(1110, 435)
+
+[node name="SeaGlass" parent="." instance=ExtResource("8_a81o0")]
+position = Vector2(99, 334)
 
 [editable path="Door/Door_shore"]

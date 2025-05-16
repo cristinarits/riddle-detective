@@ -1,5 +1,5 @@
 extends Area2D
-class_name SealedLetter
+class_name SeaGlass
 @export var interact_name: String = "Sea Glass"
 @export var is_interactable: bool = true
 
@@ -15,7 +15,7 @@ var interact: Callable = func():
 		print("Note scene loaded: ", note_scene != null)
 		var note = note_scene.instantiate()
 		get_tree().root.add_child(note)
-		note.open("Found Item", "sea-glass scratched with a compass rose")
+		note.open("Found Item", "Sea-glass scratched with a compass rose")
 		
 		queue_free()
 	else:
