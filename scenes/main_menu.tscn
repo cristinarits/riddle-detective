@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://cxpbufcwdm3kb"]
 
 [ext_resource type="Script" uid="uid://csiao5vrwtxfv" path="res://scenes/main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://b6tawkv6m3w8k" path="res://assets/background/shore.png" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://b5c1pgjgtjbl4" path="res://UI/font/dogicabold.ttf" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://3ihdgm4r3y7r" path="res://assets/items/banner.png" id="2_wu84c"]
 [ext_resource type="AudioStream" uid="uid://cyi1pjyv613fu" path="res://assets/sounds/Music/Reeder - In Defence Of The Archivist - 03 Finding; Being Found.mp3" id="4_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
-texture = ExtResource("1_ekxnf")
+texture = ExtResource("2_wu84c")
 modulate_color = Color(0.87, 0.87, 0.87, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
@@ -78,10 +78,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -188.0
-offset_top = -71.0
-offset_right = 188.0
-offset_bottom = 197.0
+offset_left = 15.0
+offset_top = -114.0
+offset_right = 391.0
+offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -136,17 +136,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -488.0
-offset_top = -255.0
-offset_right = 488.0
-offset_bottom = -148.0
+offset_left = -98.0
+offset_top = -225.0
+offset_right = 542.0
+offset_bottom = -181.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.729412, 0.733333, 0.368627, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.133333)
 theme_override_constants/shadow_offset_y = 8
 theme_override_fonts/font = ExtResource("2_bqqt6")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 text = "Mystical riddles"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -157,6 +157,7 @@ autoplay = true
 bus = &"Music"
 
 [node name="Options" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

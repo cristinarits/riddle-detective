@@ -1771,15 +1771,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 427.0
-offset_top = 599.0
-offset_right = 724.0
-offset_bottom = 647.0
+offset_left = 433.0
+offset_top = 586.0
+offset_right = 730.0
+offset_bottom = 634.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Owl" parent="." instance=ExtResource("17_f7pe8")]
-position = Vector2(559, 316)
+position = Vector2(559, 303)
 
 [node name="ToolBox" parent="." instance=ExtResource("19_uhhwb")]
 position = Vector2(698, 260)
