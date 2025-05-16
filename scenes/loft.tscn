@@ -1779,12 +1779,12 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Owl" parent="." instance=ExtResource("17_f7pe8")]
-position = Vector2(559, 303)
+position = Vector2(545, 313)
 
 [node name="ToolBox" parent="." instance=ExtResource("19_uhhwb")]
 position = Vector2(698, 260)
 
 [node name="List" parent="." instance=ExtResource("20_iwa1b")]
-position = Vector2(383, 313)
+position = Vector2(362, 299)
 
 [editable path="Door"]
