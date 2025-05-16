@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://3f370q28ouob"]
+
+[ext_resource type="Script" uid="uid://h2nfechsqp48" path="res://inventory/inventory_item.gd" id="1_t4ixp"]
+[ext_resource type="Texture2D" uid="uid://cpi7s3u5p4ywk" path="res://assets/items/list.png" id="2_yequg"]
+
+[resource]
+script = ExtResource("1_t4ixp")
+name = "Her Rules"
+text = "Always document your experiments. Don’t trust time magic. No more blood spells. —Thorne."
+texture = ExtResource("2_yequg")
+metadata/_custom_type_script = "uid://h2nfechsqp48"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://pnhp5nr7n0p7"]
+[gd_scene load_steps=48 format=4 uid="uid://pnhp5nr7n0p7"]
 
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_rcodm"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_pdhta"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://btp46pfjwovap" path="res://pickableItems/owl.tscn" id="17_f7pe8"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="18_gfksh"]
 [ext_resource type="PackedScene" uid="uid://dst6q03cn4d5e" path="res://pickableItems/tool_box.tscn" id="19_uhhwb"]
+[ext_resource type="PackedScene" uid="uid://bqyk15e43s0ud" path="res://pickableItems/items/list.tscn" id="20_iwa1b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7uvy"]
 texture = ExtResource("1_rcodm")
@@ -1781,6 +1782,9 @@ grow_vertical = 0
 position = Vector2(559, 316)
 
 [node name="ToolBox" parent="." instance=ExtResource("19_uhhwb")]
-position = Vector2(408, 269)
+position = Vector2(698, 260)
+
+[node name="List" parent="." instance=ExtResource("20_iwa1b")]
+position = Vector2(383, 313)
 
 [editable path="Door"]

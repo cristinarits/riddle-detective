@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqyk15e43s0ud"]
+
+[ext_resource type="Texture2D" uid="uid://cpi7s3u5p4ywk" path="res://assets/items/list.png" id="1_d4atr"]
+[ext_resource type="Script" uid="uid://bdxf75f154euq" path="res://pickableItems/list.gd" id="1_privx"]
+[ext_resource type="Resource" uid="uid://3f370q28ouob" path="res://pickableItems/items/list.tres" id="2_6yknh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d4atr"]
+radius = 41.4367
+
+[node name="List" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_privx")
+item = ExtResource("2_6yknh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d4atr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_d4atr")
