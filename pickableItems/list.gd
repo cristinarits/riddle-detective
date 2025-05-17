@@ -14,7 +14,7 @@ var interact: Callable = func():
 		print("Note scene loaded: ", note_scene != null)
 		var note = note_scene.instantiate()
 		get_tree().root.add_child(note)
-		note.open("Found clue:", "Always document your experiments. Don’t trust time magic. No more blood spells. —Thorne.")
+		note.open("Found clue:", '"Always document your experiments. Don’t trust time magic. No more blood spells. —Thorne."')
 		
 		queue_free()
 	else:

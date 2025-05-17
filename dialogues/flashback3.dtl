@@ -7,8 +7,8 @@ Callum: R–Rel…
 [wait time="1.0"]
 Callum: Something’s wrong—
 [wait time="2.0"]
+leave Callum
 Lia: No, no, stay with me—
 Lia: This wasn’t how it’s supposed to—
-leave Callum
 [wait time="1.0"]
-jump flashback4/
+jump dialogues/flashback4/

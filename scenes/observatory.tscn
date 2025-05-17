@@ -1638,6 +1638,7 @@ sources/10 = SubResource("TileSetAtlasSource_inl6e")
 sources/11 = SubResource("TileSetAtlasSource_b744n")
 
 [node name="observatory" type="Node2D"]
+position = Vector2(0, -3)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_inl6e")
@@ -1678,13 +1679,13 @@ tile_set = SubResource("TileSet_ruf66")
 
 [node name="more details" type="TileMapLayer" parent="TileMap/observatory"]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAAcABYAAAAKAFIAAAAeABYAAAAKABQAABAoABYAAAAKABQAAAAqABYAAAAKABQAAAAUACQAAAAOAA0AAAAgABcAAAAAACYAAAASACIAAAAMAA0AAAAFACQAAAAKABQAAAALACEAAAAOAA0AAAANACAACwAAAAAAAGA=")
+tile_map_data = PackedByteArray("AAAcABYAAAAKAFIAAAAeABYAAAAKABQAABAUACQAAAAOAA0AAAAgABcAAAAAACYAAAASACIAAAAMAA0AAAAFACQAAAAKABQAAAALACEAAAAOAA0AAAANACAACwAAAAAAAGAmABYAAAAKABQAAAAnABcAAAAKABQAAAA=")
 tile_set = SubResource("TileSet_ruf66")
 
 [node name="Door" type="Node" parent="."]
 
 [node name="Door_shore" parent="Door" instance=ExtResource("10_naw1k")]
-position = Vector2(530, 617)
+position = Vector2(530, 614)
 destination_level_tag = "game"
 destination_door_tag = "W"
 spawn_direction = "left"
@@ -1695,16 +1696,14 @@ position = Vector2(-494, -177)
 [node name="Spawn" parent="Door/Door_shore" index="1"]
 position = Vector2(0, -39)
 
-[node name="player" parent="." instance=ExtResource("11_m7377")]
-position = Vector2(116, 421)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="NoteUI" parent="CanvasLayer" instance=ExtResource("17_w0wix")]
 offset_left = 10.0
-offset_top = 1.0
+offset_top = -2.0
 offset_right = 228.0
-offset_bottom = 158.0
+offset_bottom = 155.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("18_qxb1g")]
 anchors_preset = 7
@@ -1713,16 +1712,20 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -209.0
-offset_top = -80.0
+offset_top = -83.0
 offset_right = 210.0
-offset_bottom = -14.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="BurntParchment" parent="." instance=ExtResource("18_so3cg")]
-position = Vector2(299, 561)
+position = Vector2(673, 369)
 
 [node name="Telescope" parent="." instance=ExtResource("17_ngw4d")]
-position = Vector2(569, 349)
+position = Vector2(577, 338)
+
+[node name="player" parent="." instance=ExtResource("11_m7377")]
+position = Vector2(116, 421)
 
 [editable path="Door/Door_shore"]

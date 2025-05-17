@@ -18,7 +18,7 @@ var is_roaming = true
 var is_chatting = false
 
 @export var note_title := "New clue"
-@export_multiline var note_content := "Lia is known by Mira, Direction: Academy of Aetheria"
+@export_multiline var note_content := "Lia is known by Mira, Direction: Inkteller's underground library"
 @export var add_to_journal := true
 
 func _ready():

@@ -1,4 +1,4 @@
-[background fade="0.0"]
-join Lia center
+[background arg="res://assets/background/credits.png" fade="0.0"]
 Lia: Thanks for playing
 Lia: To be continued...
+[end_timeline]
