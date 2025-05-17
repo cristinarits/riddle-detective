@@ -1657,6 +1657,7 @@ sources/6 = SubResource("TileSetAtlasSource_br6k8")
 sources/3 = SubResource("TileSetAtlasSource_iimt2")
 
 [node name="shore" type="Node2D"]
+position = Vector2(28, 27)
 script = ExtResource("1_x2efu")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1696,7 +1697,7 @@ position = Vector2(907, 281)
 [node name="Door" type="Node" parent="."]
 
 [node name="Door_shore" parent="Door" instance=ExtResource("9_w8k8i")]
-position = Vector2(530, 617)
+position = Vector2(558, 644)
 door_tag = "S"
 destination_level_tag = "game"
 destination_door_tag = "R"
@@ -1710,7 +1711,7 @@ position = Vector2(-1, -69)
 
 [node name="walls" type="TileMapLayer" parent="Door"]
 use_parent_material = true
-position = Vector2(-20, 0)
+position = Vector2(8, 27)
 tile_map_data = PackedByteArray("AAABACQAAAAIABwAAAAIACMAAAAIABwAAAANACYAAAAIABwAAAASACIAAAAIABwAAAA2ACMAAAAIABwAAAA7ACUAAAAIABwAAABBACcAAAAIABwAAABEACQAAAAIABwAAAD8/yIAAAAIABwAAAAbACUAAAAIABwAAAAYACIAAAAIABwAAAAoACQAAAAIABwAAABDABQABgAAAAAAABABABIABgAAAAAAAAAvACIAAAAIABwAAAA=")
 tile_set = SubResource("TileSet_ruf66")
 
