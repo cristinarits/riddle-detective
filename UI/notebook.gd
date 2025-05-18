@@ -14,7 +14,7 @@ func _ready():
 func open():
 	show()
 	text_edit.grab_focus()
-	get_tree().paused = true
+	get_tree().paused = false
 
 func _on_close_button_pressed():
 	hide()
