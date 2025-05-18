@@ -22,6 +22,8 @@ JournalManager="*res://journal_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 TransitionScreen="*res://scenes/transition_screen.tscn"
 Global="*res://Global.gd"
+GlobalUI="*res://GlobalUI.tscn"
+GlobalUi="*res://global_ui.gd"
 
 [dialogic]
 

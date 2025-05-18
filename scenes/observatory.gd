@@ -1,5 +1,9 @@
 extends Node2D
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		GlobalUI.toggle_pause()
+
 func _ready():
 	if NavigationManager.spawn_door_tag != null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)

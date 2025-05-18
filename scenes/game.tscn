@@ -19,6 +19,10 @@
 [sub_resource type="GDScript" id="GDScript_vtaks"]
 script/source = "extends Node2D
 
+func _unhandled_input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		GlobalUI.toggle_pause()
+
 func _ready():
 	print(\"FogCleared:\", NavigationManager.town_fog_cleared)
 

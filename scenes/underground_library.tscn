@@ -1,6 +1,7 @@
-[gd_scene load_steps=50 format=4 uid="uid://c4yt7ohpguas"]
+[gd_scene load_steps=51 format=4 uid="uid://c4yt7ohpguas"]
 
 [ext_resource type="PackedScene" uid="uid://vfdqrrvs4ghq" path="res://inkteller.tscn" id="1_ebf3q"]
+[ext_resource type="Script" uid="uid://co542kmtyw517" path="res://scenes/underground_library.gd" id="1_hewmw"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_s7v22"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_u4dd8"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="2_xbocd"]
@@ -1713,6 +1714,7 @@ sources/13 = SubResource("TileSetAtlasSource_1nedl")
 sources/14 = SubResource("TileSetAtlasSource_3ddkj")
 
 [node name="UndergroundLibrary" type="Node2D"]
+script = ExtResource("1_hewmw")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4ch2k")

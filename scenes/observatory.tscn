@@ -1,5 +1,6 @@
-[gd_scene load_steps=45 format=4 uid="uid://bthalk1ua0no3"]
+[gd_scene load_steps=46 format=4 uid="uid://bthalk1ua0no3"]
 
+[ext_resource type="Script" uid="uid://cqiol85sgk0fn" path="res://scenes/observatory.gd" id="1_hm84m"]
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="1_wcyhc"]
 [ext_resource type="Texture2D" uid="uid://gwgrb18rxr67" path="res://assets/tileset/gravel.png" id="2_c6080"]
 [ext_resource type="Texture2D" uid="uid://bg7ifaj27v5um" path="res://assets/tileset/telescope.png" id="3_aolng"]
@@ -1640,6 +1641,7 @@ sources/11 = SubResource("TileSetAtlasSource_b744n")
 
 [node name="observatory" type="Node2D"]
 position = Vector2(0, -3)
+script = ExtResource("1_hm84m")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_inl6e")
