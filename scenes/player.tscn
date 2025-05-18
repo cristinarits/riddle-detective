@@ -38,7 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cx1o5j76xrkgx" path="res://assets/character/left_walking/protag_left_walk17.png" id="22_2dvfe"]
 [ext_resource type="Texture2D" uid="uid://bbd84dpn77840" path="res://assets/character/left_walking/protag_left_walk18.png" id="23_giy8y"]
 [ext_resource type="Texture2D" uid="uid://bq0c2a1ple0s0" path="res://assets/character/left_walking/protag_left_walk19.png" id="24_fdfoy"]
-[ext_resource type="PackedScene" uid="uid://crsqcujg1yebf" path="res://interation_components/interacting_component.tscn" id="38_t4otl"]
+[ext_resource type="PackedScene" uid="uid://crsqcujg1yebf" path="res://interaction_components/interacting_component.tscn" id="38_t4otl"]
 
 [sub_resource type="GDScript" id="GDScript_g2els"]
 script/source = "extends CharacterBody2D

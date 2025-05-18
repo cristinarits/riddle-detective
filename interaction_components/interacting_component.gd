@@ -11,6 +11,8 @@ func _input(event: InputEvent) -> void:
 		if current_interactions:
 			can_interact = false
 			interact_label.hide()
+			
+			$AudioStreamPlayer.play()
 
 			await current_interactions[0].interact.call()
 			
