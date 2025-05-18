@@ -37,12 +37,12 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"dialogues/flashback4": "res://dialogues/flashback4.dtl",
 "end": "res://dialogues/end.dtl",
 "ending": "res://dialogues/ending.dtl",
 "flashback1": "res://dialogues/flashback1.dtl",
 "flashback2": "res://dialogues/flashback2.dtl",
 "flashback3": "res://dialogues/flashback3.dtl",
+"flashback4": "res://dialogues/flashback4.dtl",
 "inkteller": "res://dialogues/inkteller.dtl",
 "mia_baker": "res://dialogues/mia_baker.dtl"
 }
