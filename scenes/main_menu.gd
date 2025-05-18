@@ -3,7 +3,6 @@ extends Control
 @onready var main_buttons: VBoxContainer = $MainButtons
 @onready var options: Panel = $Options
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 

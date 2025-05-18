@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://v64h4oyrc30e"]
+[gd_scene load_steps=33 format=4 uid="uid://v64h4oyrc30e"]
 
 [ext_resource type="Texture2D" uid="uid://rl2hor7kcpru" path="res://assets/tileset/magecity.png" id="1_tuc82"]
 [ext_resource type="Script" uid="uid://c58t5x1b5rni0" path="res://scenes/shore.gd" id="1_x2efu"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="12_5evtj"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="12_oah6v"]
 [ext_resource type="PackedScene" uid="uid://dhm2ihje0smfj" path="res://pickableItems/flat_stone.tscn" id="15_cv2hm"]
+[ext_resource type="AudioStream" uid="uid://c0wb35t8d0sk1" path="res://assets/sounds/Music/Cozy Tunes/Audio/mp3/Tracks/Gentle Breeze.mp3" id="16_xu0v3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5evtj"]
 texture = ExtResource("6_5evtj")
@@ -1745,5 +1746,9 @@ position = Vector2(99, 334)
 [node name="player" parent="." instance=ExtResource("10_yhopk")]
 position = Vector2(528, 503)
 movement_speed = 300.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_xu0v3")
+autoplay = true
 
 [editable path="Door/Door_shore"]

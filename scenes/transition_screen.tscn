@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://o4vrh27qdt48" path="res://scenes/transition_screen.gd" id="1_12c8c"]
 
 [sub_resource type="Animation" id="Animation_jrk67"]
-length = 0.001
+length = 3.0
+step = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -72,3 +73,5 @@ color = Color(0.168809, 0.0912589, 0.147481, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_8adi8")
 }
+speed_scale = 0.8
+blend_times = [&"RESET", &"fade_to_black", 0.008]

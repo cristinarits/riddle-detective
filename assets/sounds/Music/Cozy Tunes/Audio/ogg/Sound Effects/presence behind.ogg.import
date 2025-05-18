@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b01appd0d7p0v"
+path="res://.godot/imported/presence behind.ogg-28f375170af0a541ef15ebdd302ca2fc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Cozy Tunes/Audio/ogg/Sound Effects/presence behind.ogg"
+dest_files=["res://.godot/imported/presence behind.ogg-28f375170af0a541ef15ebdd302ca2fc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

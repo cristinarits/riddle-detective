@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbr7aaklxytry"
+path="res://.godot/imported/Evening Harmony.mp3-04aab6a38742ee281088e15b89044543.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Music/Cozy Tunes/Audio/mp3/Tracks/Evening Harmony.mp3"
+dest_files=["res://.godot/imported/Evening Harmony.mp3-04aab6a38742ee281088e15b89044543.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
