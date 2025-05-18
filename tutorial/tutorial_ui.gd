@@ -7,8 +7,8 @@ var move_hint_shown := true
 var interact_hint_shown := true
 
 func _ready():
-	move_hint.visible = true
-	interact_hint.visible = true
+	move_hint.visible = not Global.has_moved
+	interact_hint.visible = not Global.has_interacted
 
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
@@ -19,20 +19,18 @@ func _ready():
 	var mira = get_tree().get_first_node_in_group("mira")
 	if mira and mira.has_signal("chatted_with_player"):
 		mira.chatted_with_player.connect(_on_player_interacted)
-	else:
-		print("❌ Mira not found or signal missing")
 
 func _process(_delta):
-	if move_hint_shown and (
+	if not Global.has_moved and (
 		Input.is_action_pressed("ui_up") or
 		Input.is_action_pressed("ui_down") or
 		Input.is_action_pressed("ui_left") or
 		Input.is_action_pressed("ui_right")
 	):
 		move_hint.visible = false
-		move_hint_shown = false
+		Global.has_moved = true
 
 func _on_player_interacted():
-	if interact_hint_shown:
+	if not Global.has_interacted:
 		interact_hint.visible = false
-		interact_hint_shown = false
+		Global.has_interacted = true
