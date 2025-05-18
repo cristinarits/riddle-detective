@@ -24,6 +24,14 @@ func update(slot: InvSlot):
 	else:
 		item_visual.texture = item.texture
 		item_visual.visible = true
+
+		var target_size = Vector2(56, 56)
+		var tex_size = item.texture.get_size()
+		var scale_factor = target_size / tex_size
+		item_visual.scale = scale_factor * 0.8
+
+		item_visual.position = Vector2.ZERO
+
 		item_name.text = item.name
 		item_text.text = item.text if item.text != "" else "No description."
 		item_button.disabled = false
