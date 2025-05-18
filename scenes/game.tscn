@@ -421,6 +421,7 @@ sources/3 = SubResource("TileSetAtlasSource_kvpfn")
 script = SubResource("GDScript_vtaks")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="NoteUI" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
 offset_left = 166.0
@@ -510,7 +511,7 @@ destination_door_tag = "O"
 position = Vector2(-13.5, -1)
 
 [node name="Spawn" parent="doors/door_G" index="1"]
-position = Vector2(1, -82)
+position = Vector2(-17, -82)
 
 [node name="Door_R" parent="doors" instance=ExtResource("9_0tnpc")]
 position = Vector2(415, -46)

@@ -1689,15 +1689,15 @@ tile_set = SubResource("TileSet_ruf66")
 
 [node name="Door_shore" parent="Door" instance=ExtResource("10_naw1k")]
 position = Vector2(530, 614)
+door_tag = "O"
 destination_level_tag = "game"
-destination_door_tag = "W"
-spawn_direction = "left"
+destination_door_tag = "G"
 
 [node name="CollisionShape2D" parent="Door/Door_shore" index="0"]
 position = Vector2(-494, -177)
 
 [node name="Spawn" parent="Door/Door_shore" index="1"]
-position = Vector2(0, -39)
+position = Vector2(-435, -181)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
