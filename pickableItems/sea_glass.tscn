@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://fp378vcch5d0"]
 
-[ext_resource type="Script" uid="uid://bckkbn5uaeh12" path="res://interaction_components/sea_glass.gd" id="1_otjrv"]
+[ext_resource type="Script" uid="uid://bckkbn5uaeh12" path="res://pickableItems/items/sea_glass.gd" id="1_otjrv"]
 [ext_resource type="Resource" uid="uid://chgrwja7lisfe" path="res://pickableItems/items/seaglass.tres" id="2_oc212"]
 [ext_resource type="Texture2D" uid="uid://b13m6iih1b72y" path="res://assets/items/sea_glass.png" id="3_lyekf"]
 

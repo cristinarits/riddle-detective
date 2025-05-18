@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://xh2kxwjy8kxv" path="res://assets/tileset/cave.png" id="6_5evtj"]
 [ext_resource type="Texture2D" uid="uid://qw83hhkugkek" path="res://assets/tileset/pebbles (2).png" id="7_12c14"]
 [ext_resource type="PackedScene" uid="uid://ddcjoouyv41f8" path="res://pickableItems/letter_bottle.tscn" id="7_oah6v"]
-[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://interaction_components/sea_glass.tscn" id="8_a81o0"]
+[ext_resource type="PackedScene" uid="uid://fp378vcch5d0" path="res://pickableItems/sea_glass.tscn" id="8_a81o0"]
 [ext_resource type="PackedScene" uid="uid://d3meljyjaivgn" path="res://script/door.tscn" id="9_w8k8i"]
 [ext_resource type="PackedScene" uid="uid://btkhkjvucyuqc" path="res://scenes/player.tscn" id="10_yhopk"]
 [ext_resource type="PackedScene" uid="uid://e8h8mjbjwrvv" path="res://UI/note_ui.tscn" id="12_5evtj"]

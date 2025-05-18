@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://btp46pfjwovap" path="res://pickableItems/owl.tscn" id="17_f7pe8"]
 [ext_resource type="PackedScene" uid="uid://46a26i0rwxx6" path="res://inventory/inv_ui.tscn" id="18_gfksh"]
 [ext_resource type="PackedScene" uid="uid://dst6q03cn4d5e" path="res://pickableItems/tool_box.tscn" id="19_uhhwb"]
-[ext_resource type="PackedScene" uid="uid://bqyk15e43s0ud" path="res://pickableItems/items/list.tscn" id="20_iwa1b"]
+[ext_resource type="PackedScene" uid="uid://bqyk15e43s0ud" path="res://pickableItems/list.tscn" id="20_iwa1b"]
 [ext_resource type="AudioStream" uid="uid://bgind0yhk3onl" path="res://assets/sounds/Music/Cozy Tunes/Audio/mp3/Tracks/Golden Gleam.mp3" id="21_5wpeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7uvy"]
